@@ -1,0 +1,3007 @@
+<!DOCTYPE html>
+<html lang="fr" itemscope itemtype="https://schema.org/Store">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique Pièces TP | Vente Accessoires Engins - LOCASTEEL</title>
+    <meta name="description" content="Achetez vos accessoires pour engins TP : brise roche hydraulique, pince de tri, godet peigne, godet râteau. Livraison France. LOCASTEEL Bordeaux ☎ 06 85 56 39 01">
+    <meta name="keywords" content="brise roche hydraulique, pince de tri, godet peigne, godet râteau, pince multifonctions bois, accessoires pelle, boutique TP Bordeaux">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="author" content="LOCASTEEL">
+    <link rel="canonical" href="https://www.locasteel.com/boutique.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="LOCASTEEL">
+    <meta property="og:url" content="https://www.locasteel.com/boutique.html">
+    <meta property="og:title" content="Boutique Accessoires TP - LOCASTEEL">
+    <meta property="og:description" content="Vente d'accessoires pour engins TP. Livraison rapide.">
+    <meta property="og:image" content="https://www.locasteel.com/images/LOCASTEEL LOGO OFFICIEL.jpeg">
+    <meta property="og:locale" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Boutique Accessoires TP - LOCASTEEL">
+    <meta name="twitter:image" content="https://www.locasteel.com/images/LOCASTEEL LOGO OFFICIEL.jpeg">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Store","name":"LOCASTEEL Boutique","description":"Vente d'accessoires pour engins TP","url":"https://www.locasteel.com/boutique.html","telephone":"+33685563901","address":{"@type":"PostalAddress","streetAddress":"12 rue Stéphanie Kwolek","addressLocality":"Le Haillan","postalCode":"33185","addressCountry":"FR"}}</script>
+    <script>tailwind.config={theme:{extend:{colors:{red:{50:'#fef2f2',100:'#fee2e2',200:'#fecaca',300:'#fca5a5',400:'#f87171',500:'#DC143C',600:'#C41E3A',700:'#A91B2E',800:'#991b1b',900:'#7f1d1d'},steel:{50:'#f8f8f8',100:'#f0f0f0',200:'#e4e4e4',300:'#d1d1d1',400:'#a3a3a3',500:'#737373',600:'#525252',700:'#404040',800:'#262626',900:'#171717'}}}}}</script>
+    <style>
+        .red-gradient{background:linear-gradient(135deg,#DC143C 0%,#A91B2E 100%)}
+        .product-card:hover{transform:translateY(-5px);box-shadow:0 20px 40px rgba(0,0,0,0.1)}
+        .product-card{transition:all 0.3s ease}
+        .cart-badge{animation:pulse 2s infinite}
+        @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+    </style>
+</head>
+<body class="bg-steel-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center">
+                    <img src="images/LOCASTEEL LOGO OFFICIEL.jpeg" alt="LOCASTEEL Logo" class="h-16 w-auto">
+                </a>
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-steel-700 hover:text-red-500 font-medium">Accueil</a>
+                    <a href="index.html#catalogue" class="text-steel-700 hover:text-red-500 font-medium">Location</a>
+                    <a href="boutique.html" class="text-red-500 font-medium">Boutique</a>
+                    <a href="occasions.html" class="text-steel-700 hover:text-red-500 font-medium">Occasions</a>
+                    <a href="index.html#contact" class="text-steel-700 hover:text-red-500 font-medium">Contact</a>
+                    <button onclick="openCart()" class="relative text-steel-700 hover:text-red-500">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center cart-badge hidden">0</span>
+                    </button>
+                    <a href="tel:+33685563901" class="bg-red-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-600">
+                        <i class="fas fa-phone mr-2"></i>06 85 56 39 01
+                    </a>
+                </div>
+                <div class="lg:hidden flex items-center space-x-4">
+                    <button onclick="openCart()" class="relative text-steel-700">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span id="cart-count-mobile" class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center hidden">0</span>
+                    </button>
+                    <button onclick="toggleMobileMenu()" class="text-steel-700">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block text-steel-700 hover:text-red-500 font-medium py-2">Accueil</a>
+                <a href="index.html#catalogue" class="block text-steel-700 hover:text-red-500 font-medium py-2">Location</a>
+                <a href="boutique.html" class="block text-red-500 font-medium py-2">Boutique</a>
+                <a href="occasions.html" class="block text-steel-700 hover:text-red-500 font-medium py-2">Occasions</a>
+                <a href="index.html#contact" class="block text-steel-700 hover:text-red-500 font-medium py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Ultra Dynamique -->
+    <section class="red-gradient py-12 relative overflow-hidden">
+        <!-- Éléments décoratifs animés -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute -top-10 -left-10 w-40 h-40 bg-white/10 rounded-full animate-pulse"></div>
+            <div class="absolute top-20 right-10 w-20 h-20 bg-white/10 rounded-full animate-bounce" style="animation-delay: 0.5s;"></div>
+            <div class="absolute bottom-5 left-1/4 w-16 h-16 bg-white/10 rounded-full animate-ping" style="animation-duration: 2s;"></div>
+            <div class="absolute -bottom-5 right-1/3 w-32 h-32 bg-white/5 rounded-full animate-pulse" style="animation-delay: 1s;"></div>
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center">
+                <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6 animate-bounce" style="animation-duration: 2s;">
+                    <i class="fas fa-star text-yellow-300"></i>
+                    <span class="text-white font-semibold">Qualité Premium • Prix Justes</span>
+                    <i class="fas fa-star text-yellow-300"></i>
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
+                    Boutique <span class="text-yellow-300">Accessoires TP</span>
+                </h1>
+                
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 max-w-3xl mx-auto mb-6 border border-white/20">
+                    <p class="text-xl md:text-2xl text-white font-medium leading-relaxed">
+                        <i class="fas fa-quote-left text-yellow-300 mr-2"></i>
+                        Nous avons sélectionné pour vous des <span class="text-yellow-300 font-bold">produits de haute qualité</span> à des <span class="text-yellow-300 font-bold">prix compétitifs</span>
+                        <i class="fas fa-quote-right text-yellow-300 ml-2"></i>
+                    </p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-4 text-white/90">
+                    <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
+                        <i class="fas fa-check-circle text-green-400"></i>
+                        <span>Livraison France</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
+                        <i class="fas fa-shield-alt text-green-400"></i>
+                        <span>Garantie constructeur</span>
+                    </div>
+                    <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
+                        <i class="fas fa-tags text-green-400"></i>
+                        <span>Prix HT affichés</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sélecteur d'engin -->
+    <section class="bg-gradient-to-r from-steel-800 to-steel-700 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-xl p-6 shadow-lg">
+                <h3 class="text-lg font-bold text-steel-800 mb-4 flex items-center">
+                    <i class="fas fa-truck-monster text-red-500 mr-2"></i>
+                    Trouvez les accessoires compatibles avec votre engin
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-steel-700 mb-1">Marque</label>
+                        <select id="select-marque" class="w-full px-3 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none" onchange="updateModeles()">
+                            <option value="">-- Sélectionnez une marque --</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-steel-700 mb-1">Modèle</label>
+                        <select id="select-modele" class="w-full px-3 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none" onchange="filterByEngin()" disabled>
+                            <option value="">-- Sélectionnez un modèle --</option>
+                        </select>
+                    </div>
+                    <div class="flex items-end">
+                        <button onclick="resetEnginFilter()" class="w-full px-4 py-2 bg-steel-100 text-steel-700 rounded-lg hover:bg-steel-200 font-medium">
+                            <i class="fas fa-redo mr-2"></i>Réinitialiser
+                        </button>
+                    </div>
+                </div>
+                <p id="engin-info" class="mt-3 text-sm text-steel-500 hidden"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtres -->
+    <section class="bg-white py-6 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="filterProducts('all')" class="filter-btn active px-4 py-2 rounded-full bg-red-500 text-white font-medium" data-filter="all">Tous</button>
+                    <button onclick="filterProducts('bois')" class="filter-btn px-4 py-2 rounded-full bg-steel-100 text-steel-700 font-medium hover:bg-steel-200" data-filter="bois">Pince multifonctions à bois</button>
+                    <button onclick="filterProducts('brh')" class="filter-btn px-4 py-2 rounded-full bg-steel-100 text-steel-700 font-medium hover:bg-steel-200" data-filter="brh">Brise roche hydraulique</button>
+                    <button onclick="filterProducts('peigne')" class="filter-btn px-4 py-2 rounded-full bg-steel-100 text-steel-700 font-medium hover:bg-steel-200" data-filter="peigne">Godet peigne</button>
+                    <button onclick="filterProducts('rateau')" class="filter-btn px-4 py-2 rounded-full bg-steel-100 text-steel-700 font-medium hover:bg-steel-200" data-filter="rateau">Godet râteau curage</button>
+                    <button onclick="filterProducts('inclinable')" class="filter-btn px-4 py-2 rounded-full bg-steel-100 text-steel-700 font-medium hover:bg-steel-200" data-filter="inclinable">Godet curage inclinable</button>
+                    <button onclick="filterProducts('dent')" class="filter-btn px-4 py-2 rounded-full bg-steel-100 text-steel-700 font-medium hover:bg-steel-200" data-filter="dent">Dent de déroctage</button>
+                    <button onclick="filterProducts('kit')" class="filter-btn px-4 py-2 rounded-full bg-steel-100 text-steel-700 font-medium hover:bg-steel-200" data-filter="kit">Kits à souder</button>
+                    <button onclick="filterProducts('fleco')" class="filter-btn px-4 py-2 rounded-full bg-steel-100 text-steel-700 font-medium hover:bg-steel-200" data-filter="fleco">Godet Fleco sur mesure</button>
+                    <button onclick="filterProducts('pince')" class="filter-btn px-4 py-2 rounded-full bg-steel-100 text-steel-700 font-medium hover:bg-steel-200" data-filter="pince">Pince de tri</button>
+                </div>
+                <div class="relative">
+                    <input type="text" id="search-input" placeholder="Rechercher..." class="pl-10 pr-4 py-2 border border-steel-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500" onkeyup="searchProducts()">
+                    <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-steel-400"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bannière ULK - Godet Fleco sur mesure -->
+    <section id="ulk-banner" class="hidden py-8 bg-gradient-to-r from-steel-900 to-steel-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                <div class="text-white">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="bg-green-500 text-white text-xs font-bold px-3 py-1 rounded-full">FABRICANT</span>
+                        <span class="text-2xl font-bold text-green-400">ULK</span>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-4">Godet Fleco <span class="text-red-500">Sur Mesure</span></h2>
+                    <p class="text-steel-300 mb-6">Notre fournisseur <strong class="text-white">ULK</strong> dispose d'un <strong class="text-green-400">bureau d'étude spécialisé</strong> dans la fabrication de godets. Nous sommes capables de fabriquer vos godets Fleco sur mesure en fonction de vos besoins spécifiques.</p>
+                    
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <button onclick="openRdvModal()" class="bg-green-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-green-600 transition flex items-center">
+                            <i class="fas fa-calendar-check mr-2"></i>Prendre RDV pour étude de projet
+                        </button>
+                        <a href="mailto:contact@locasteel.com?subject=Demande d'étude de projet Godet Fleco" class="bg-red-500 text-white px-6 py-3 rounded-lg font-bold hover:bg-red-600 transition flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>Nous contacter
+                        </a>
+                    </div>
+                    
+                    <h3 class="text-xl font-bold mb-4 text-red-400"><i class="fas fa-cogs mr-2"></i>Les étapes de fabrication</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-5 gap-3">
+                        <div class="bg-steel-700/50 p-3 rounded-lg text-center">
+                            <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <span class="text-white font-bold">1</span>
+                            </div>
+                            <i class="fas fa-comments text-2xl text-green-400 mb-2"></i>
+                            <p class="text-xs font-medium">Prise d'informations</p>
+                        </div>
+                        <div class="bg-steel-700/50 p-3 rounded-lg text-center">
+                            <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <span class="text-white font-bold">2</span>
+                            </div>
+                            <i class="fas fa-check-circle text-2xl text-green-400 mb-2"></i>
+                            <p class="text-xs font-medium">Validation de commande</p>
+                        </div>
+                        <div class="bg-steel-700/50 p-3 rounded-lg text-center">
+                            <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <span class="text-white font-bold">3</span>
+                            </div>
+                            <i class="fas fa-drafting-compass text-2xl text-green-400 mb-2"></i>
+                            <p class="text-xs font-medium">Visuel 3D & Plan 2D</p>
+                        </div>
+                        <div class="bg-steel-700/50 p-3 rounded-lg text-center">
+                            <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <span class="text-white font-bold">4</span>
+                            </div>
+                            <i class="fas fa-industry text-2xl text-green-400 mb-2"></i>
+                            <p class="text-xs font-medium">Fabrication</p>
+                        </div>
+                        <div class="bg-steel-700/50 p-3 rounded-lg text-center">
+                            <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                                <span class="text-white font-bold">5</span>
+                            </div>
+                            <i class="fas fa-truck text-2xl text-green-400 mb-2"></i>
+                            <p class="text-xs font-medium">Livraison</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden lg:block">
+                    <img src="images/GODET FLECO.jpeg" alt="Godet Fleco ULK" class="rounded-xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalogue Produits -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Les produits seront injectés ici par JavaScript -->
+            </div>
+            <div id="no-products" class="hidden text-center py-16">
+                <i class="fas fa-box-open text-6xl text-steel-300 mb-4"></i>
+                <p class="text-xl text-steel-500">Aucun produit trouvé</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avantages -->
+    <section class="bg-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <i class="fas fa-truck text-4xl text-red-500 mb-4"></i>
+                    <h3 class="font-bold text-steel-800 mb-2">Livraison France</h3>
+                    <p class="text-steel-500">Expédition rapide partout en France</p>
+                </div>
+                <div class="p-6">
+                    <i class="fas fa-shield-alt text-4xl text-red-500 mb-4"></i>
+                    <h3 class="font-bold text-steel-800 mb-2">Garantie</h3>
+                    <p class="text-steel-500">Produits garantis constructeur</p>
+                </div>
+                <div class="p-6">
+                    <i class="fas fa-headset text-4xl text-red-500 mb-4"></i>
+                    <h3 class="font-bold text-steel-800 mb-2">Conseil Expert</h3>
+                    <p class="text-steel-500">Équipe technique à votre écoute</p>
+                </div>
+                <div class="p-6">
+                    <i class="fas fa-euro-sign text-4xl text-red-500 mb-4"></i>
+                    <h3 class="font-bold text-steel-800 mb-2">Prix Compétitifs</h3>
+                    <p class="text-steel-500">Meilleur rapport qualité/prix</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Avis Clients -->
+    <section class="bg-gradient-to-b from-steel-100 to-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-yellow-100 text-yellow-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
+                    <i class="fas fa-star mr-2"></i>Avis vérifiés
+                </span>
+                <h2 class="text-3xl md:text-4xl font-bold text-steel-800 mb-4">Ce que nos clients disent de nous</h2>
+                <div class="flex justify-center items-center gap-2 mb-2">
+                    <div class="flex text-yellow-400 text-2xl">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="text-xl font-bold text-steel-700">4.8/5</span>
+                    <span class="text-steel-500">basé sur 47 avis</span>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Avis 1 -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-steel-100 hover:shadow-xl transition">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center text-white font-bold text-lg">JD</div>
+                        <div>
+                            <h4 class="font-bold text-steel-800">Jean-Pierre D.</h4>
+                            <p class="text-sm text-steel-500">Artisan TP - Gironde</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-steel-600 mb-3">"Godet fléco reçu en 5 jours, qualité au top ! Le conseil téléphonique m'a permis de choisir la bonne taille pour ma Kubota. Je recommande."</p>
+                    <p class="text-xs text-steel-400"><i class="fas fa-check-circle text-green-500 mr-1"></i>Achat vérifié - Godet Fléco T23</p>
+                </div>
+                
+                <!-- Avis 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-steel-100 hover:shadow-xl transition">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-steel-700 rounded-full flex items-center justify-center text-white font-bold text-lg">ML</div>
+                        <div>
+                            <h4 class="font-bold text-steel-800">Marc L.</h4>
+                            <p class="text-sm text-steel-500">Entreprise BTP - Dordogne</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-steel-600 mb-3">"Très satisfait du BRH commandé. Rapport qualité/prix imbattable. Livraison soignée et bien emballé. Équipe réactive au téléphone."</p>
+                    <p class="text-xs text-steel-400"><i class="fas fa-check-circle text-green-500 mr-1"></i>Achat vérifié - BRH UB140H</p>
+                </div>
+                
+                <!-- Avis 3 -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-steel-100 hover:shadow-xl transition">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-lg">SB</div>
+                        <div>
+                            <h4 class="font-bold text-steel-800">Sébastien B.</h4>
+                            <p class="text-sm text-steel-500">Paysagiste - Lot-et-Garonne</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-steel-600 mb-3">"Pince multifonctions parfaite pour mes travaux forestiers. Bonne finition, rotation fluide. Petit délai de livraison mais ça valait le coup d'attendre."</p>
+                    <p class="text-xs text-steel-400"><i class="fas fa-check-circle text-green-500 mr-1"></i>Achat vérifié - Pince UGM30</p>
+                </div>
+                
+                <!-- Avis 4 -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-steel-100 hover:shadow-xl transition">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-lg">PT</div>
+                        <div>
+                            <h4 class="font-bold text-steel-800">Philippe T.</h4>
+                            <p class="text-sm text-steel-500">Chef de chantier - Charente</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-steel-600 mb-3">"2ème commande chez LOCASTEEL, toujours aussi pro. Kit à souder Cangini nickel, platine parfaitement adaptée à mon attache. Service client au top."</p>
+                    <p class="text-xs text-steel-400"><i class="fas fa-check-circle text-green-500 mr-1"></i>Achat vérifié - Kit Cangini CR40</p>
+                </div>
+                
+                <!-- Avis 5 -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-steel-100 hover:shadow-xl transition">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold text-lg">AR</div>
+                        <div>
+                            <h4 class="font-bold text-steel-800">Antoine R.</h4>
+                            <p class="text-sm text-steel-500">Agriculteur - Landes</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p class="text-steel-600 mb-3">"Godet râteau curage solide et bien fini. Prix correct pour la qualité. J'aurais aimé une livraison un peu plus rapide mais sinon RAS."</p>
+                    <p class="text-xs text-steel-400"><i class="fas fa-check-circle text-green-500 mr-1"></i>Achat vérifié - Godet râteau 1200mm</p>
+                </div>
+                
+                <!-- Avis 6 -->
+                <div class="bg-white rounded-2xl p-6 shadow-lg border border-steel-100 hover:shadow-xl transition">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center text-white font-bold text-lg">CM</div>
+                        <div>
+                            <h4 class="font-bold text-steel-800">Christophe M.</h4>
+                            <p class="text-sm text-steel-500">Terrassier - Pyrénées-Atlantiques</p>
+                        </div>
+                    </div>
+                    <div class="flex text-yellow-400 mb-3">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-steel-600 mb-3">"Excellente pince de tri, robuste et précise. Le conseiller m'a bien guidé pour le choix de la platine. Entreprise sérieuse, je reviendrai !"</p>
+                    <p class="text-xs text-steel-400"><i class="fas fa-check-circle text-green-500 mr-1"></i>Achat vérifié - Pince de tri UG500</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Panier Sidebar -->
+    <div id="cart-sidebar" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/50" onclick="closeCart()"></div>
+        <div class="absolute right-0 top-0 h-full w-full max-w-md bg-white shadow-xl flex flex-col">
+            <div class="p-6 border-b flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-steel-800"><i class="fas fa-shopping-cart mr-2 text-red-500"></i>Votre Panier</h2>
+                <button onclick="closeCart()" class="text-steel-500 hover:text-steel-700"><i class="fas fa-times text-2xl"></i></button>
+            </div>
+            <div id="cart-items" class="flex-1 overflow-y-auto p-6">
+                <p class="text-steel-500 text-center py-8">Votre panier est vide</p>
+            </div>
+            <div class="p-6 border-t bg-steel-50">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-lg font-medium text-steel-700">Total HT:</span>
+                    <span id="cart-total" class="text-2xl font-bold text-red-500">0,00 €</span>
+                </div>
+                <div class="flex justify-between items-center mb-4 text-sm text-steel-500">
+                    <span>TVA (20%):</span>
+                    <span id="cart-tva">0,00 €</span>
+                </div>
+                <div class="flex justify-between items-center mb-4 pb-4 border-b border-steel-200">
+                    <span class="text-lg font-bold text-steel-800">Total TTC:</span>
+                    <span id="cart-total-ttc" class="text-2xl font-bold text-green-600">0,00 €</span>
+                </div>
+                <button onclick="showPaymentForm()" id="pay-btn" class="w-full bg-green-500 text-white py-4 rounded-lg font-bold hover:bg-green-600 disabled:opacity-50 disabled:cursor-not-allowed mb-3 flex items-center justify-center" disabled>
+                    <i class="fab fa-stripe text-2xl mr-2"></i>Payer maintenant
+                </button>
+                <button onclick="showCheckoutForm()" id="checkout-btn" class="w-full bg-steel-600 text-white py-3 rounded-lg font-medium hover:bg-steel-700 disabled:opacity-50 disabled:cursor-not-allowed" disabled>
+                    <i class="fas fa-paper-plane mr-2"></i>Demander un devis (sans paiement)
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Formulaire -->
+    <div id="checkout-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/50" onclick="closeCheckoutModal()"></div>
+        <div class="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6 border-b">
+                <h2 class="text-2xl font-bold text-steel-800">Demande de devis</h2>
+                <button onclick="closeCheckoutModal()" class="absolute top-6 right-6 text-steel-500 hover:text-steel-700"><i class="fas fa-times text-xl"></i></button>
+            </div>
+            <form id="checkout-form" class="p-6 space-y-4">
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-steel-700 mb-1">Prénom *</label>
+                        <input type="text" name="prenom" required class="w-full px-4 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-steel-700 mb-1">Nom *</label>
+                        <input type="text" name="nom" required class="w-full px-4 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-steel-700 mb-1">Société</label>
+                    <input type="text" name="societe" class="w-full px-4 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-steel-700 mb-1">Email *</label>
+                    <input type="email" name="email" required class="w-full px-4 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-steel-700 mb-1">Téléphone *</label>
+                    <input type="tel" name="telephone" required class="w-full px-4 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-steel-700 mb-1">Message</label>
+                    <textarea name="message" rows="3" class="w-full px-4 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none" placeholder="Précisions sur votre demande..."></textarea>
+                </div>
+                <div id="order-summary" class="bg-steel-50 p-4 rounded-lg">
+                    <!-- Résumé de la commande -->
+                </div>
+                <button type="submit" class="w-full bg-red-500 text-white py-4 rounded-lg font-bold hover:bg-red-600">
+                    <i class="fas fa-paper-plane mr-2"></i>Envoyer la demande
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Paiement Stripe -->
+    <div id="payment-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/50" onclick="closePaymentModal()"></div>
+        <div class="relative bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto">
+            <div class="bg-gradient-to-r from-green-500 to-green-600 p-6 rounded-t-2xl">
+                <div class="flex justify-between items-center">
+                    <div class="flex items-center">
+                        <i class="fab fa-stripe text-white text-4xl mr-3"></i>
+                        <div>
+                            <h2 class="text-2xl font-bold text-white">Paiement sécurisé</h2>
+                            <p class="text-green-100 text-sm">Vos données sont protégées</p>
+                        </div>
+                    </div>
+                    <button onclick="closePaymentModal()" class="text-white/80 hover:text-white"><i class="fas fa-times text-2xl"></i></button>
+                </div>
+            </div>
+            <form id="payment-form" class="p-6 space-y-4" onsubmit="processPayment(event)">
+                <div class="bg-green-50 p-4 rounded-lg mb-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-steel-600">Total HT:</span>
+                        <span id="payment-total-ht" class="font-medium">0,00 €</span>
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-steel-600">TVA (20%):</span>
+                        <span id="payment-tva" class="font-medium">0,00 €</span>
+                    </div>
+                    <div class="flex justify-between items-center pt-2 border-t border-green-200">
+                        <span class="text-lg font-bold text-steel-800">Total TTC:</span>
+                        <span id="payment-total-ttc" class="text-2xl font-bold text-green-600">0,00 €</span>
+                    </div>
+                </div>
+                
+                <h3 class="font-bold text-steel-800"><i class="fas fa-user mr-2 text-green-500"></i>Informations de facturation</h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-steel-700 mb-1">Prénom *</label>
+                        <input type="text" name="pay-prenom" required class="w-full px-4 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-steel-700 mb-1">Nom *</label>
+                        <input type="text" name="pay-nom" required class="w-full px-4 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-steel-700 mb-1">Email *</label>
+                    <input type="email" name="pay-email" required class="w-full px-4 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none" placeholder="Pour recevoir la confirmation">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-steel-700 mb-1">Téléphone *</label>
+                    <input type="tel" name="pay-telephone" required class="w-full px-4 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-steel-700 mb-1">Société</label>
+                    <input type="text" name="pay-societe" class="w-full px-4 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-steel-700 mb-1">Adresse de livraison *</label>
+                    <textarea name="pay-adresse" required rows="2" class="w-full px-4 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none" placeholder="Adresse complète avec code postal et ville"></textarea>
+                </div>
+                
+                <h3 class="font-bold text-steel-800 pt-4"><i class="fas fa-credit-card mr-2 text-green-500"></i>Informations de paiement</h3>
+                <div class="bg-steel-50 p-4 rounded-lg border border-steel-200">
+                    <div id="card-element" class="p-3 bg-white rounded border border-steel-200">
+                        <!-- Stripe Card Element sera inséré ici -->
+                        <div class="text-center text-steel-500 py-4">
+                            <i class="fas fa-lock text-2xl mb-2"></i>
+                            <p class="text-sm">Paiement sécurisé par Stripe</p>
+                            <p class="text-xs text-steel-400 mt-1">Entrez vos informations de carte bancaire</p>
+                            <div class="flex justify-center gap-2 mt-3">
+                                <i class="fab fa-cc-visa text-2xl text-blue-600"></i>
+                                <i class="fab fa-cc-mastercard text-2xl text-red-500"></i>
+                                <i class="fab fa-cc-amex text-2xl text-blue-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card-errors" class="text-red-500 text-sm mt-2 hidden"></div>
+                </div>
+                
+                <div class="bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                    <p class="text-sm text-yellow-800"><i class="fas fa-info-circle mr-2"></i><strong>Note :</strong> Pour activer le paiement en ligne, vous devez configurer votre compte Stripe et ajouter vos clés API. Contactez votre développeur pour finaliser l'intégration.</p>
+                </div>
+                
+                <button type="submit" id="submit-payment" class="w-full bg-green-500 text-white py-4 rounded-lg font-bold hover:bg-green-600 transition flex items-center justify-center">
+                    <i class="fas fa-lock mr-2"></i>Payer <span id="btn-amount" class="ml-1">0,00 €</span>
+                </button>
+                
+                <p class="text-xs text-center text-steel-400">
+                    <i class="fas fa-shield-alt mr-1"></i>Paiement 100% sécurisé • Vos données sont chiffrées
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Confirmation de commande -->
+    <div id="confirmation-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="relative bg-white rounded-2xl shadow-2xl max-w-md w-full text-center p-8">
+            <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-check text-green-500 text-4xl"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-steel-800 mb-2">Commande confirmée !</h2>
+            <p class="text-steel-600 mb-4">Merci pour votre commande. Un email de confirmation a été envoyé à :</p>
+            <p id="confirmation-email" class="font-bold text-green-600 mb-6">email@exemple.com</p>
+            <div class="bg-steel-50 p-4 rounded-lg mb-6 text-left">
+                <p class="text-sm text-steel-600"><i class="fas fa-receipt mr-2 text-green-500"></i>N° de commande : <span id="order-number" class="font-bold">CMD-XXXXX</span></p>
+                <p class="text-sm text-steel-600 mt-2"><i class="fas fa-euro-sign mr-2 text-green-500"></i>Montant : <span id="order-amount" class="font-bold">0,00 € TTC</span></p>
+            </div>
+            <p class="text-sm text-steel-500 mb-6">Nous vous contacterons sous 24h pour confirmer les délais de livraison.</p>
+            <button onclick="closeConfirmationModal()" class="w-full bg-green-500 text-white py-3 rounded-lg font-bold hover:bg-green-600">
+                <i class="fas fa-home mr-2"></i>Retour à la boutique
+            </button>
+        </div>
+    </div>
+
+    <!-- Chatbot IA -->
+    <div id="chatbot-container" class="fixed bottom-6 right-6 z-50">
+        <!-- Bouton d'ouverture -->
+        <button id="chatbot-toggle" onclick="toggleChatbot()" class="w-16 h-16 bg-red-500 rounded-full shadow-lg flex items-center justify-center hover:bg-red-600 transition-all hover:scale-110">
+            <i class="fas fa-robot text-white text-2xl"></i>
+        </button>
+        
+        <!-- Fenêtre de chat -->
+        <div id="chatbot-window" class="hidden absolute bottom-20 right-0 w-96 bg-white rounded-2xl shadow-2xl overflow-hidden border border-steel-200">
+            <!-- Header -->
+            <div class="bg-gradient-to-r from-red-500 to-red-600 p-4 flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mr-3">
+                        <i class="fas fa-robot text-white text-lg"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-bold">Assistant LOCASTEEL</h4>
+                        <p class="text-white/80 text-xs">En ligne • Réponse instantanée</p>
+                    </div>
+                </div>
+                <button onclick="toggleChatbot()" class="text-white/80 hover:text-white">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Messages -->
+            <div id="chatbot-messages" class="h-80 overflow-y-auto p-4 space-y-3 bg-steel-50">
+                <!-- Messages seront ajoutés ici -->
+            </div>
+            
+            <!-- Input -->
+            <div class="p-4 border-t border-steel-200 bg-white">
+                <div class="flex gap-2">
+                    <input type="text" id="chatbot-input" placeholder="Posez votre question..." class="flex-1 px-4 py-2 border border-steel-200 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500" onkeypress="if(event.key==='Enter')sendMessage()">
+                    <button onclick="sendMessage()" class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center hover:bg-red-600">
+                        <i class="fas fa-paper-plane text-white"></i>
+                    </button>
+                </div>
+                <div class="mt-2 flex flex-wrap gap-1">
+                    <button onclick="quickQuestion('Quels produits pour ma pelle ?')" class="text-xs px-2 py-1 bg-steel-100 rounded-full text-steel-600 hover:bg-steel-200">🔧 Produits compatibles</button>
+                    <button onclick="quickQuestion('Quels sont vos prix ?')" class="text-xs px-2 py-1 bg-steel-100 rounded-full text-steel-600 hover:bg-steel-200">💰 Prix</button>
+                    <button onclick="quickQuestion('Comment commander ?')" class="text-xs px-2 py-1 bg-steel-100 rounded-full text-steel-600 hover:bg-steel-200">🛒 Commander</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Prise de RDV -->
+    <div id="rdv-modal" class="hidden fixed inset-0 bg-black/70 z-50 items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="bg-gradient-to-r from-green-500 to-green-600 p-6 rounded-t-2xl">
+                <div class="flex justify-between items-center">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white"><i class="fas fa-calendar-check mr-2"></i>Prendre rendez-vous</h3>
+                        <p class="text-green-100">Étude de projet Godet Fleco sur mesure</p>
+                    </div>
+                    <button onclick="closeRdvModal()" class="text-white/80 hover:text-white text-2xl">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+            <form id="rdv-form" class="p-6 space-y-4" onsubmit="submitRdv(event)">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-steel-700 mb-1">Nom *</label>
+                        <input type="text" name="rdv-nom" required class="w-full px-4 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-steel-700 mb-1">Prénom *</label>
+                        <input type="text" name="rdv-prenom" required class="w-full px-4 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none">
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-steel-700 mb-1">Email *</label>
+                        <input type="email" name="rdv-email" required class="w-full px-4 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-steel-700 mb-1">Téléphone *</label>
+                        <input type="tel" name="rdv-telephone" required class="w-full px-4 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-steel-700 mb-1">Société</label>
+                    <input type="text" name="rdv-societe" class="w-full px-4 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none">
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-steel-700 mb-1"><i class="fas fa-calendar text-green-500 mr-1"></i>Date souhaitée *</label>
+                        <input type="date" name="rdv-date" id="rdv-date" required min="" class="w-full px-4 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-steel-700 mb-1"><i class="fas fa-clock text-green-500 mr-1"></i>Créneau horaire *</label>
+                        <select name="rdv-heure" required class="w-full px-4 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none">
+                            <option value="">-- Choisir un créneau --</option>
+                            <option value="09:00">09:00 - 10:00</option>
+                            <option value="10:00">10:00 - 11:00</option>
+                            <option value="11:00">11:00 - 12:00</option>
+                            <option value="14:00">14:00 - 15:00</option>
+                            <option value="15:00">15:00 - 16:00</option>
+                            <option value="16:00">16:00 - 17:00</option>
+                            <option value="17:00">17:00 - 18:00</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-steel-700 mb-1">Type d'engin</label>
+                    <input type="text" name="rdv-engin" placeholder="Ex: Kubota U35, Caterpillar 305..." class="w-full px-4 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-steel-700 mb-1">Description du projet</label>
+                    <textarea name="rdv-projet" rows="3" placeholder="Décrivez votre besoin (dimensions, nombre de branches, utilisation...)" class="w-full px-4 py-2 border border-steel-200 rounded-lg focus:ring-2 focus:ring-green-500 focus:outline-none"></textarea>
+                </div>
+                <div class="bg-green-50 p-4 rounded-lg">
+                    <p class="text-sm text-green-800"><i class="fas fa-info-circle mr-2"></i>Un conseiller LOCASTEEL vous contactera pour confirmer le rendez-vous et préparer l'étude de votre projet.</p>
+                </div>
+                <button type="submit" class="w-full bg-green-500 text-white py-4 rounded-lg font-bold hover:bg-green-600 transition">
+                    <i class="fas fa-calendar-check mr-2"></i>Confirmer la demande de RDV
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-steel-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <img src="images/LOCASTEEL LOGO OFFICIEL.jpeg" alt="LOCASTEEL" class="h-16 mb-4 rounded">
+                    <p class="text-steel-400">Spécialiste accessoires pour engins TP depuis 2020.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Liens Rapides</h4>
+                    <ul class="space-y-2 text-steel-400">
+                        <li><a href="index.html" class="hover:text-white">Accueil</a></li>
+                        <li><a href="index.html#catalogue" class="hover:text-white">Location</a></li>
+                        <li><a href="boutique.html" class="hover:text-white">Boutique</a></li>
+                        <li><a href="occasions.html" class="hover:text-white">Occasions</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-steel-400">
+                        <li><i class="fas fa-phone mr-2"></i>06 85 56 39 01</li>
+                        <li><i class="fas fa-envelope mr-2"></i>contact@locasteel.com</li>
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Le Haillan, 33185</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Horaires</h4>
+                    <ul class="space-y-2 text-steel-400">
+                        <li>Lun - Ven : 7h30 - 18h00</li>
+                        <li>Samedi : Sur RDV</li>
+                        <li>Dimanche : Fermé</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-steel-800 mt-8 pt-8 text-center text-steel-500 text-sm">
+                <p>© 2024 LOCASTEEL. Tous droits réservés. Prix affichés HT.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Base de données des engins (marques et modèles avec catégorie de poids)
+        const enginsDatabase = {
+            "Bobcat": [
+                { modele: "E08", taille: "T01", poids: "0.8T" },
+                { modele: "E10", taille: "T01", poids: "1T" },
+                { modele: "E17", taille: "T12", poids: "1.7T" },
+                { modele: "E19", taille: "T12", poids: "1.9T" },
+                { modele: "E20", taille: "T12", poids: "2T" },
+                { modele: "E26", taille: "T23", poids: "2.6T" },
+                { modele: "E27", taille: "T23", poids: "2.7T" },
+                { modele: "E32", taille: "T23", poids: "3.2T" },
+                { modele: "E35", taille: "T23", poids: "3.5T" },
+                { modele: "E42", taille: "T35", poids: "4.2T" },
+                { modele: "E45", taille: "T35", poids: "4.5T" },
+                { modele: "E50", taille: "T35", poids: "5T" },
+                { modele: "E55", taille: "T35", poids: "5.5T" },
+                { modele: "E60", taille: "T35", poids: "6T" },
+                { modele: "E85", taille: "T810", poids: "8.5T" }
+            ],
+            "Caterpillar": [
+                { modele: "300.9D", taille: "T01", poids: "0.9T" },
+                { modele: "301.5", taille: "T12", poids: "1.5T" },
+                { modele: "301.7", taille: "T12", poids: "1.7T" },
+                { modele: "301.8", taille: "T12", poids: "1.8T" },
+                { modele: "302 CR", taille: "T12", poids: "2T" },
+                { modele: "302.7 CR", taille: "T23", poids: "2.7T" },
+                { modele: "303 CR", taille: "T23", poids: "3T" },
+                { modele: "303.5 CR", taille: "T23", poids: "3.5T" },
+                { modele: "304 CR", taille: "T35", poids: "4T" },
+                { modele: "305 CR", taille: "T35", poids: "5T" },
+                { modele: "305.5 CR", taille: "T35", poids: "5.5T" },
+                { modele: "306 CR", taille: "T35", poids: "6T" },
+                { modele: "308 CR", taille: "T810", poids: "8T" },
+                { modele: "309 CR", taille: "T810", poids: "9T" },
+                { modele: "310", taille: "T810", poids: "10T" },
+                { modele: "313", taille: "T1215", poids: "13T" },
+                { modele: "315", taille: "T1215", poids: "15T" }
+            ],
+            "Kubota": [
+                { modele: "K008-3", taille: "T01", poids: "0.8T" },
+                { modele: "U10-3", taille: "T01", poids: "1T" },
+                { modele: "U17-3", taille: "T12", poids: "1.7T" },
+                { modele: "KX016-4", taille: "T12", poids: "1.6T" },
+                { modele: "KX018-4", taille: "T12", poids: "1.8T" },
+                { modele: "U20-3", taille: "T12", poids: "2T" },
+                { modele: "KX019-4", taille: "T12", poids: "1.9T" },
+                { modele: "U25-3", taille: "T12", poids: "2.5T" },
+                { modele: "KX027-4", taille: "T23", poids: "2.7T" },
+                { modele: "U27-4", taille: "T23", poids: "2.7T" },
+                { modele: "KX033-4", taille: "T23", poids: "3.3T" },
+                { modele: "U35-4", taille: "T23", poids: "3.5T" },
+                { modele: "KX037-4", taille: "T23", poids: "3.7T" },
+                { modele: "U48-4", taille: "T35", poids: "4.8T" },
+                { modele: "KX057-4", taille: "T35", poids: "5.7T" },
+                { modele: "U55-4", taille: "T35", poids: "5.5T" },
+                { modele: "KX080-4", taille: "T810", poids: "8T" }
+            ],
+            "Komatsu": [
+                { modele: "PC09-1", taille: "T01", poids: "0.9T" },
+                { modele: "PC14R-3", taille: "T12", poids: "1.4T" },
+                { modele: "PC18MR-3", taille: "T12", poids: "1.8T" },
+                { modele: "PC26MR-3", taille: "T23", poids: "2.6T" },
+                { modele: "PC30MR-5", taille: "T23", poids: "3T" },
+                { modele: "PC35MR-5", taille: "T23", poids: "3.5T" },
+                { modele: "PC45MR-5", taille: "T35", poids: "4.5T" },
+                { modele: "PC55MR-5", taille: "T35", poids: "5.5T" },
+                { modele: "PC58MR-5", taille: "T35", poids: "5.8T" },
+                { modele: "PC78US-10", taille: "T810", poids: "7.8T" },
+                { modele: "PC88MR-10", taille: "T810", poids: "8.8T" },
+                { modele: "PC138US-11", taille: "T1215", poids: "13.8T" }
+            ],
+            "Volvo": [
+                { modele: "EC15E", taille: "T12", poids: "1.5T" },
+                { modele: "EC18E", taille: "T12", poids: "1.8T" },
+                { modele: "EC20E", taille: "T12", poids: "2T" },
+                { modele: "ECR25E", taille: "T12", poids: "2.5T" },
+                { modele: "EC27C", taille: "T23", poids: "2.7T" },
+                { modele: "ECR35D", taille: "T23", poids: "3.5T" },
+                { modele: "ECR40D", taille: "T35", poids: "4T" },
+                { modele: "ECR50D", taille: "T35", poids: "5T" },
+                { modele: "EC55D", taille: "T35", poids: "5.5T" },
+                { modele: "ECR58D", taille: "T35", poids: "5.8T" },
+                { modele: "EC60E", taille: "T35", poids: "6T" },
+                { modele: "ECR88D", taille: "T810", poids: "8.8T" },
+                { modele: "EC140E", taille: "T1215", poids: "14T" }
+            ],
+            "JCB": [
+                { modele: "8008 CTS", taille: "T01", poids: "0.8T" },
+                { modele: "8010 CTS", taille: "T01", poids: "1T" },
+                { modele: "15C-1", taille: "T12", poids: "1.5T" },
+                { modele: "16C-1", taille: "T12", poids: "1.6T" },
+                { modele: "18Z-1", taille: "T12", poids: "1.8T" },
+                { modele: "19C-1", taille: "T12", poids: "1.9T" },
+                { modele: "8025 ZTS", taille: "T12", poids: "2.5T" },
+                { modele: "8026 CTS", taille: "T23", poids: "2.6T" },
+                { modele: "8030 ZTS", taille: "T23", poids: "3T" },
+                { modele: "8035 ZTS", taille: "T23", poids: "3.5T" },
+                { modele: "48Z-1", taille: "T35", poids: "4.8T" },
+                { modele: "51R-1", taille: "T35", poids: "5.1T" },
+                { modele: "55Z-1", taille: "T35", poids: "5.5T" },
+                { modele: "57C-1", taille: "T35", poids: "5.7T" },
+                { modele: "65R-1", taille: "T35", poids: "6.5T" },
+                { modele: "85Z-1", taille: "T810", poids: "8.5T" },
+                { modele: "86C-1", taille: "T810", poids: "8.6T" },
+                { modele: "100C-1", taille: "T810", poids: "10T" },
+                { modele: "131X", taille: "T1215", poids: "13T" },
+                { modele: "140X", taille: "T1215", poids: "14T" },
+                { modele: "150X", taille: "T1215", poids: "15T" }
+            ],
+            "Takeuchi": [
+                { modele: "TB108", taille: "T01", poids: "0.8T" },
+                { modele: "TB210R", taille: "T01", poids: "1T" },
+                { modele: "TB216", taille: "T12", poids: "1.6T" },
+                { modele: "TB217R", taille: "T12", poids: "1.7T" },
+                { modele: "TB219", taille: "T12", poids: "1.9T" },
+                { modele: "TB225", taille: "T12", poids: "2.5T" },
+                { modele: "TB230", taille: "T23", poids: "3T" },
+                { modele: "TB235-2", taille: "T23", poids: "3.5T" },
+                { modele: "TB240", taille: "T35", poids: "4T" },
+                { modele: "TB250-2", taille: "T35", poids: "5T" },
+                { modele: "TB257FR", taille: "T35", poids: "5.7T" },
+                { modele: "TB260", taille: "T35", poids: "6T" },
+                { modele: "TB280FR", taille: "T810", poids: "8T" },
+                { modele: "TB290", taille: "T810", poids: "9T" },
+                { modele: "TB2150R", taille: "T1215", poids: "15T" }
+            ],
+            "Yanmar": [
+                { modele: "SV08-1A", taille: "T01", poids: "0.8T" },
+                { modele: "SV15", taille: "T12", poids: "1.5T" },
+                { modele: "SV17", taille: "T12", poids: "1.7T" },
+                { modele: "SV18", taille: "T12", poids: "1.8T" },
+                { modele: "VIO17", taille: "T12", poids: "1.7T" },
+                { modele: "VIO20", taille: "T12", poids: "2T" },
+                { modele: "VIO23", taille: "T12", poids: "2.3T" },
+                { modele: "VIO25", taille: "T12", poids: "2.5T" },
+                { modele: "VIO26", taille: "T23", poids: "2.6T" },
+                { modele: "VIO33", taille: "T23", poids: "3.3T" },
+                { modele: "VIO35", taille: "T23", poids: "3.5T" },
+                { modele: "VIO38", taille: "T23", poids: "3.8T" },
+                { modele: "VIO45", taille: "T35", poids: "4.5T" },
+                { modele: "VIO50", taille: "T35", poids: "5T" },
+                { modele: "VIO55", taille: "T35", poids: "5.5T" },
+                { modele: "VIO57", taille: "T35", poids: "5.7T" },
+                { modele: "VIO80", taille: "T810", poids: "8T" },
+                { modele: "SV100", taille: "T810", poids: "10T" }
+            ],
+            "Hitachi": [
+                { modele: "ZX10U-6", taille: "T01", poids: "1T" },
+                { modele: "ZX17U-6", taille: "T12", poids: "1.7T" },
+                { modele: "ZX19U-6", taille: "T12", poids: "1.9T" },
+                { modele: "ZX26U-6", taille: "T23", poids: "2.6T" },
+                { modele: "ZX33U-6", taille: "T23", poids: "3.3T" },
+                { modele: "ZX38U-6", taille: "T23", poids: "3.8T" },
+                { modele: "ZX48U-5", taille: "T35", poids: "4.8T" },
+                { modele: "ZX55U-6", taille: "T35", poids: "5.5T" },
+                { modele: "ZX65USB-6", taille: "T35", poids: "6.5T" },
+                { modele: "ZX85USB-6", taille: "T810", poids: "8.5T" },
+                { modele: "ZX130-6", taille: "T1215", poids: "13T" },
+                { modele: "ZX135US-6", taille: "T1215", poids: "13.5T" }
+            ],
+            "Doosan": [
+                { modele: "DX10Z-7", taille: "T01", poids: "1T" },
+                { modele: "DX17Z-7", taille: "T12", poids: "1.7T" },
+                { modele: "DX19-7", taille: "T12", poids: "1.9T" },
+                { modele: "DX27Z-7", taille: "T23", poids: "2.7T" },
+                { modele: "DX35Z-7", taille: "T23", poids: "3.5T" },
+                { modele: "DX42-7", taille: "T35", poids: "4.2T" },
+                { modele: "DX50Z-7", taille: "T35", poids: "5T" },
+                { modele: "DX55-7", taille: "T35", poids: "5.5T" },
+                { modele: "DX62R-7", taille: "T35", poids: "6.2T" },
+                { modele: "DX85R-7", taille: "T810", poids: "8.5T" },
+                { modele: "DX100W-7", taille: "T810", poids: "10T" },
+                { modele: "DX140LC-7", taille: "T1215", poids: "14T" }
+            ],
+            "Hyundai": [
+                { modele: "HX10A", taille: "T01", poids: "1T" },
+                { modele: "HX17AZ", taille: "T12", poids: "1.7T" },
+                { modele: "HX20AZ", taille: "T12", poids: "2T" },
+                { modele: "HX27Z", taille: "T23", poids: "2.7T" },
+                { modele: "HX35AZ", taille: "T23", poids: "3.5T" },
+                { modele: "HX48AZ", taille: "T35", poids: "4.8T" },
+                { modele: "HX55A", taille: "T35", poids: "5.5T" },
+                { modele: "HX85A", taille: "T810", poids: "8.5T" },
+                { modele: "HX130 LCR", taille: "T1215", poids: "13T" },
+                { modele: "HX145 LCR", taille: "T1215", poids: "14.5T" }
+            ],
+            "Case": [
+                { modele: "CX15 EV", taille: "T12", poids: "1.5T" },
+                { modele: "CX17C", taille: "T12", poids: "1.7T" },
+                { modele: "CX18C", taille: "T12", poids: "1.8T" },
+                { modele: "CX26C", taille: "T23", poids: "2.6T" },
+                { modele: "CX30C", taille: "T23", poids: "3T" },
+                { modele: "CX37C", taille: "T23", poids: "3.7T" },
+                { modele: "CX50C", taille: "T35", poids: "5T" },
+                { modele: "CX57C", taille: "T35", poids: "5.7T" },
+                { modele: "CX60C", taille: "T35", poids: "6T" },
+                { modele: "CX75C SR", taille: "T810", poids: "7.5T" },
+                { modele: "CX80C", taille: "T810", poids: "8T" },
+                { modele: "CX130D", taille: "T1215", poids: "13T" },
+                { modele: "CX145D SR", taille: "T1215", poids: "14.5T" }
+            ],
+            "Kobelco": [
+                { modele: "SK10SR-3", taille: "T01", poids: "1T" },
+                { modele: "SK17SR-5", taille: "T12", poids: "1.7T" },
+                { modele: "SK20SR-6", taille: "T12", poids: "2T" },
+                { modele: "SK26SR-6", taille: "T23", poids: "2.6T" },
+                { modele: "SK28SR-6", taille: "T23", poids: "2.8T" },
+                { modele: "SK35SR-6", taille: "T23", poids: "3.5T" },
+                { modele: "SK45SRX-6", taille: "T35", poids: "4.5T" },
+                { modele: "SK55SRX-6", taille: "T35", poids: "5.5T" },
+                { modele: "SK58SRX-6", taille: "T35", poids: "5.8T" },
+                { modele: "SK75SR-7", taille: "T810", poids: "7.5T" },
+                { modele: "SK85MSR-7", taille: "T810", poids: "8.5T" },
+                { modele: "SK130LC-11", taille: "T1215", poids: "13T" },
+                { modele: "SK140SRLC-7", taille: "T1215", poids: "14T" }
+            ],
+            "Wacker Neuson": [
+                { modele: "803", taille: "T01", poids: "0.8T" },
+                { modele: "EZ17", taille: "T12", poids: "1.7T" },
+                { modele: "EZ20", taille: "T12", poids: "2T" },
+                { modele: "EZ26", taille: "T23", poids: "2.6T" },
+                { modele: "EZ36", taille: "T23", poids: "3.6T" },
+                { modele: "EZ50", taille: "T35", poids: "5T" },
+                { modele: "EZ53", taille: "T35", poids: "5.3T" },
+                { modele: "ET65", taille: "T35", poids: "6.5T" },
+                { modele: "ET90", taille: "T810", poids: "9T" }
+            ],
+            "Mecalac": [
+                { modele: "6MCR", taille: "T35", poids: "6T" },
+                { modele: "7MWR", taille: "T810", poids: "7T" },
+                { modele: "8MCR", taille: "T810", poids: "8T" },
+                { modele: "10MCR", taille: "T810", poids: "10T" },
+                { modele: "12MTX", taille: "T1215", poids: "12T" },
+                { modele: "15MC", taille: "T1215", poids: "15T" }
+            ],
+            "Liebherr": [
+                { modele: "A910 Compact", taille: "T810", poids: "10T" },
+                { modele: "A912 Compact", taille: "T1215", poids: "12T" },
+                { modele: "R914 Compact", taille: "T1215", poids: "14T" }
+            ],
+            "Sany": [
+                { modele: "SY16C", taille: "T12", poids: "1.6T" },
+                { modele: "SY18C", taille: "T12", poids: "1.8T" },
+                { modele: "SY26U", taille: "T23", poids: "2.6T" },
+                { modele: "SY35U", taille: "T23", poids: "3.5T" },
+                { modele: "SY50U", taille: "T35", poids: "5T" },
+                { modele: "SY55C", taille: "T35", poids: "5.5T" },
+                { modele: "SY60C", taille: "T35", poids: "6T" },
+                { modele: "SY75C", taille: "T810", poids: "7.5T" },
+                { modele: "SY80U", taille: "T810", poids: "8T" },
+                { modele: "SY135C", taille: "T1215", poids: "13.5T" }
+            ],
+            "XCMG": [
+                { modele: "XE15U", taille: "T12", poids: "1.5T" },
+                { modele: "XE17U", taille: "T12", poids: "1.7T" },
+                { modele: "XE27U", taille: "T23", poids: "2.7T" },
+                { modele: "XE35U", taille: "T23", poids: "3.5T" },
+                { modele: "XE55U", taille: "T35", poids: "5.5T" },
+                { modele: "XE60U", taille: "T35", poids: "6T" },
+                { modele: "XE75U", taille: "T810", poids: "7.5T" },
+                { modele: "XE135D", taille: "T1215", poids: "13.5T" }
+            ]
+        };
+
+        let selectedTaille = null;
+
+        // Options pour Godet Fleco sur mesure (+15% arrondis)
+        const flecoOptions = {
+            tailles: [
+                { name: "T12 - Porteurs de 1 à 2T", value: "T12", basePrice: 1000 },
+                { name: "T23 - Porteurs de 2 à 4T", value: "T23", basePrice: 1115 },
+                { name: "T35 - Porteurs de 4 à 6T", value: "T35", basePrice: 1900 },
+                { name: "T810 - Porteurs de 8 à 10T", value: "T810", basePrice: 2700 },
+                { name: "T1215 - Porteurs de 12 à 15T", value: "T1215", basePrice: 6025 }
+            ],
+            branches: {
+                T12: [
+                    { name: "3 branches 300mm", price: 1000 },
+                    { name: "4 branches 500mm", price: 1070 },
+                    { name: "5 branches 700mm", price: 1140 }
+                ],
+                T23: [
+                    { name: "3 branches 300mm", price: 1115 },
+                    { name: "4 branches 500mm", price: 1185 },
+                    { name: "5 branches 700mm", price: 1260 }
+                ],
+                T35: [
+                    { name: "5 branches 700mm", price: 1900 },
+                    { name: "7 branches 1000mm", price: 2025 },
+                    { name: "8 branches 1200mm", price: 2160 }
+                ],
+                T810: [
+                    { name: "5 branches 1000mm", price: 2700 },
+                    { name: "6 branches 1200mm", price: 2875 },
+                    { name: "7 branches 1400mm", price: 3060 }
+                ],
+                T1215: [
+                    { name: "5 branches 1200mm", price: 6025 },
+                    { name: "7 branches 1500mm", price: 6785 },
+                    { name: "8 branches 1800mm", price: 7210 },
+                    { name: "9 branches 2000mm", price: 7670 }
+                ]
+            },
+            dents: {
+                T12: [
+                    { name: "3 branches", price: 35 },
+                    { name: "4 branches", price: 45 },
+                    { name: "5 branches", price: 60 }
+                ],
+                T23: [
+                    { name: "3 branches", price: 35 },
+                    { name: "4 branches", price: 45 },
+                    { name: "5 branches", price: 60 }
+                ],
+                T35: [
+                    { name: "5 branches", price: 85 },
+                    { name: "7 branches", price: 120 },
+                    { name: "8 branches", price: 140 }
+                ],
+                T810: [
+                    { name: "5 branches", price: 230 },
+                    { name: "6 branches", price: 275 },
+                    { name: "7 branches", price: 320 }
+                ],
+                T1215: [
+                    { name: "5 branches", price: 345 },
+                    { name: "7 branches", price: 485 },
+                    { name: "8 branches", price: 550 },
+                    { name: "9 branches", price: 620 }
+                ]
+            },
+            reprise: {
+                T12: { name: "Reprise attache rapide (CANGINI, MORIN, KLAC, VERACHTERT...)", price: 230 },
+                T23: { name: "Reprise attache rapide (CANGINI, MORIN, KLAC, VERACHTERT...)", price: 290 },
+                T35: { name: "Reprise attache rapide (CANGINI, MORIN, KLAC, VERACHTERT...)", price: 400 },
+                T810: { name: "Reprise attache rapide (CANGINI, MORIN, KLAC, VERACHTERT...)", price: 520 },
+                T1215: { name: "Reprise attache rapide (CANGINI, MORIN, KLAC, VERACHTERT...)", price: 1025 }
+            }
+        };
+
+        // Options de kits à souder par type
+        const kitOptions = {
+            cangini: [
+                { name: "CR15", price: 190 },
+                { name: "CR30", price: 250 },
+                { name: "CR40", price: 270 },
+                { name: "CR50", price: 390 },
+                { name: "CR70", price: 480 }
+            ],
+            martin: [
+                { name: "M02", price: 90 },
+                { name: "M03", price: 130 },
+                { name: "M10", price: 180 }
+            ],
+            systemes: [
+                { name: "S30", price: 90 },
+                { name: "S40", price: 130 },
+                { name: "S45", price: 180 },
+                { name: "S50", price: 180 },
+                { name: "S60", price: 380 },
+                { name: "S70", price: 540 }
+            ]
+        };
+
+        // Options de platines par taille
+        const platinesOptions = {
+            T01: [
+                { name: "Platine axes démontables Ø25-30", price: 200 },
+                { name: "Platine axes soudés", price: 200 },
+                { name: "Platine Morin M0", price: 350 },
+                { name: "Platine CR15 Cangini", price: 350 },
+                { name: "Platine S30", price: 0 },
+                { name: "Platine MARTIN M01", price: 200 },
+                { name: "Platine Klac C", price: 350 },
+                { name: "Platine Verchtert CW05", price: 350 },
+                { name: "Platine Lehnhoff MS01", price: 300 },
+                { name: "Platine Arden QA05", price: 300 }
+            ],
+            T12: [
+                { name: "Platine axes démontables Ø25-30", price: 200 },
+                { name: "Platine axes soudés", price: 200 },
+                { name: "Platine Morin M0", price: 350 },
+                { name: "Platine CR15 Cangini", price: 350 },
+                { name: "Platine S30", price: 0 },
+                { name: "Platine MARTIN M01", price: 200 },
+                { name: "Platine Klac C", price: 350 },
+                { name: "Platine Verchtert CW05", price: 350 },
+                { name: "Platine Lehnhoff MS01", price: 300 },
+                { name: "Platine Arden QA05", price: 300 }
+            ],
+            T23: [
+                { name: "Platine axes démontables Ø35-40", price: 300 },
+                { name: "Platine axes soudés", price: 300 },
+                { name: "Platine Morin M1", price: 400 },
+                { name: "Platine CR30 Cangini", price: 400 },
+                { name: "Platine S40", price: 0 },
+                { name: "Platine MARTIN M03", price: 300 },
+                { name: "Platine Klac D", price: 400 },
+                { name: "Platine Verchtert CW05", price: 400 },
+                { name: "Platine Lehnhoff MS03", price: 300 },
+                { name: "Platine Arden QA11", price: 300 }
+            ],
+            T34: [
+                { name: "Platine axes démontables Ø35-40", price: 300 },
+                { name: "Platine axes soudés", price: 300 },
+                { name: "Platine Morin M2", price: 450 },
+                { name: "Platine CR40 Cangini", price: 450 },
+                { name: "Platine S40", price: 0 },
+                { name: "Platine MARTIN M03", price: 300 },
+                { name: "Platine Klac D", price: 400 },
+                { name: "Platine Verchtert CW10", price: 450 },
+                { name: "Platine Lehnhoff MS03", price: 300 },
+                { name: "Platine Arden QA11", price: 300 }
+            ],
+            T35: [
+                { name: "Platine axes démontables Ø40-45", price: 400 },
+                { name: "Platine axes soudés", price: 400 },
+                { name: "Platine Morin M2", price: 450 },
+                { name: "Platine CR50 Cangini", price: 480 },
+                { name: "Platine S40", price: 0 },
+                { name: "Platine MARTIN M10", price: 400 },
+                { name: "Platine Klac E", price: 450 },
+                { name: "Platine Verchtert CW10", price: 450 },
+                { name: "Platine Lehnhoff MS03", price: 400 },
+                { name: "Platine Arden QA11", price: 400 }
+            ],
+            T810: [
+                { name: "Platine axes démontables Ø50-60", price: 500 },
+                { name: "Platine axes soudés", price: 500 },
+                { name: "Platine Morin M3", price: 550 },
+                { name: "Platine CR70 Cangini", price: 550 },
+                { name: "Platine S45/S50", price: 0 },
+                { name: "Platine MARTIN M10", price: 500 },
+                { name: "Platine Klac F", price: 550 },
+                { name: "Platine Verchtert CW10", price: 550 },
+                { name: "Platine Lehnhoff MS10", price: 500 },
+                { name: "Platine Arden QA21", price: 550 }
+            ],
+            T1215: [
+                { name: "Platine axes démontables Ø50-60", price: 500 },
+                { name: "Platine axes soudés", price: 500 },
+                { name: "Platine Morin M3", price: 550 },
+                { name: "Platine CR70 Cangini", price: 550 },
+                { name: "Platine S45/S50", price: 0 },
+                { name: "Platine MARTIN M10", price: 500 },
+                { name: "Platine Klac F", price: 550 },
+                { name: "Platine Verchtert CW10", price: 550 },
+                { name: "Platine Lehnhoff MS10", price: 500 },
+                { name: "Platine Arden QA21", price: 550 }
+            ]
+        };
+
+        // Supplément attache spécifique
+        const supplementAttache = { name: "Supplément attache MORIN, CANGINI, LEHNHOFF, ARDEN", price: 250 };
+
+        // Options platines pour Godet curage inclinable (prix réduits de 100€ sur Morin, Cangini, Lehnhoff, Klac, Verachtert)
+        const platinesInclinable = {
+            T12: [
+                { name: "Platine axes démontables Ø25-30", price: 200 },
+                { name: "Platine axes soudés", price: 200 },
+                { name: "Platine Morin M0", price: 250 },
+                { name: "Platine CR15 Cangini", price: 250 },
+                { name: "Platine S30", price: 0 },
+                { name: "Platine MARTIN M01", price: 200 },
+                { name: "Platine Klac C", price: 250 },
+                { name: "Platine Verachtert CW05", price: 250 },
+                { name: "Platine Lehnhoff MS01", price: 200 },
+                { name: "Platine Arden QA05", price: 300 }
+            ],
+            T23: [
+                { name: "Platine axes démontables Ø35-40", price: 300 },
+                { name: "Platine axes soudés", price: 300 },
+                { name: "Platine Morin M1", price: 300 },
+                { name: "Platine CR30 Cangini", price: 300 },
+                { name: "Platine S40", price: 0 },
+                { name: "Platine MARTIN M03", price: 300 },
+                { name: "Platine Klac D", price: 300 },
+                { name: "Platine Verachtert CW05", price: 300 },
+                { name: "Platine Lehnhoff MS03", price: 200 },
+                { name: "Platine Arden QA11", price: 300 }
+            ],
+            T34: [
+                { name: "Platine axes démontables Ø35-40", price: 300 },
+                { name: "Platine axes soudés", price: 300 },
+                { name: "Platine Morin M2", price: 350 },
+                { name: "Platine CR40 Cangini", price: 350 },
+                { name: "Platine S40", price: 0 },
+                { name: "Platine MARTIN M03", price: 300 },
+                { name: "Platine Klac D", price: 300 },
+                { name: "Platine Verachtert CW10", price: 350 },
+                { name: "Platine Lehnhoff MS03", price: 200 },
+                { name: "Platine Arden QA11", price: 300 }
+            ],
+            T35: [
+                { name: "Platine axes démontables Ø40-45", price: 300 },
+                { name: "Platine axes soudés", price: 300 },
+                { name: "Platine Morin M2", price: 350 },
+                { name: "Platine CR50 Cangini", price: 380 },
+                { name: "Platine S40", price: 0 },
+                { name: "Platine MARTIN M10", price: 300 },
+                { name: "Platine Klac E", price: 350 },
+                { name: "Platine Verachtert CW10", price: 350 },
+                { name: "Platine Lehnhoff MS03", price: 300 },
+                { name: "Platine Arden QA11", price: 400 }
+            ],
+            T810: [
+                { name: "Platine axes démontables Ø50-60", price: 400 },
+                { name: "Platine axes soudés", price: 400 },
+                { name: "Platine Morin M3", price: 450 },
+                { name: "Platine CR70 Cangini", price: 450 },
+                { name: "Platine S45/S50", price: 0 },
+                { name: "Platine MARTIN M10", price: 400 },
+                { name: "Platine Klac F", price: 450 },
+                { name: "Platine Verachtert CW10", price: 450 },
+                { name: "Platine Lehnhoff MS10", price: 400 },
+                { name: "Platine Arden QA21", price: 550 }
+            ]
+        };
+
+        // Options platines pour Pince de tri, BRH et Pince multifonction (+350€ sur chaque platine)
+        const platinesMajorees = {
+            T01: [
+                { name: "Platine nue", price: 0 },
+                { name: "Platine axes démontables Ø25-30", price: 550 },
+                { name: "Platine axes soudés", price: 550 },
+                { name: "Platine Morin M0", price: 700 },
+                { name: "Platine CR15 Cangini", price: 700 },
+                { name: "Platine S30", price: 350 },
+                { name: "Platine MARTIN M01", price: 550 },
+                { name: "Platine Klac C", price: 700 },
+                { name: "Platine Verachtert CW05", price: 700 },
+                { name: "Platine Lehnhoff MS01", price: 650 },
+                { name: "Platine Arden QA05", price: 650 }
+            ],
+            T12: [
+                { name: "Platine nue", price: 0 },
+                { name: "Platine axes démontables Ø25-30", price: 550 },
+                { name: "Platine axes soudés", price: 550 },
+                { name: "Platine Morin M0", price: 700 },
+                { name: "Platine CR15 Cangini", price: 700 },
+                { name: "Platine S30", price: 350 },
+                { name: "Platine MARTIN M01", price: 550 },
+                { name: "Platine Klac C", price: 700 },
+                { name: "Platine Verachtert CW05", price: 700 },
+                { name: "Platine Lehnhoff MS01", price: 650 },
+                { name: "Platine Arden QA05", price: 650 }
+            ],
+            T23: [
+                { name: "Platine nue", price: 0 },
+                { name: "Platine axes démontables Ø35-40", price: 650 },
+                { name: "Platine axes soudés", price: 650 },
+                { name: "Platine Morin M1", price: 750 },
+                { name: "Platine CR30 Cangini", price: 750 },
+                { name: "Platine S40", price: 350 },
+                { name: "Platine MARTIN M03", price: 650 },
+                { name: "Platine Klac D", price: 750 },
+                { name: "Platine Verachtert CW05", price: 750 },
+                { name: "Platine Lehnhoff MS03", price: 650 },
+                { name: "Platine Arden QA11", price: 650 }
+            ],
+            T34: [
+                { name: "Platine nue", price: 0 },
+                { name: "Platine axes démontables Ø35-40", price: 650 },
+                { name: "Platine axes soudés", price: 650 },
+                { name: "Platine Morin M2", price: 800 },
+                { name: "Platine CR40 Cangini", price: 800 },
+                { name: "Platine S40", price: 350 },
+                { name: "Platine MARTIN M03", price: 650 },
+                { name: "Platine Klac D", price: 750 },
+                { name: "Platine Verachtert CW10", price: 800 },
+                { name: "Platine Lehnhoff MS03", price: 650 },
+                { name: "Platine Arden QA11", price: 650 }
+            ],
+            T35: [
+                { name: "Platine nue", price: 0 },
+                { name: "Platine axes démontables Ø40-45", price: 750 },
+                { name: "Platine axes soudés", price: 750 },
+                { name: "Platine Morin M2", price: 800 },
+                { name: "Platine CR50 Cangini", price: 830 },
+                { name: "Platine S40", price: 350 },
+                { name: "Platine MARTIN M10", price: 750 },
+                { name: "Platine Klac E", price: 800 },
+                { name: "Platine Verachtert CW10", price: 800 },
+                { name: "Platine Lehnhoff MS03", price: 750 },
+                { name: "Platine Arden QA11", price: 750 }
+            ],
+            T810: [
+                { name: "Platine nue", price: 0 },
+                { name: "Platine axes démontables Ø50-60", price: 850 },
+                { name: "Platine axes soudés", price: 850 },
+                { name: "Platine Morin M3", price: 900 },
+                { name: "Platine CR70 Cangini", price: 900 },
+                { name: "Platine S45/S50", price: 350 },
+                { name: "Platine MARTIN M10", price: 850 },
+                { name: "Platine Klac F", price: 900 },
+                { name: "Platine Verachtert CW10", price: 900 },
+                { name: "Platine Lehnhoff MS10", price: 850 },
+                { name: "Platine Arden QA21", price: 900 }
+            ],
+            T1215: [
+                { name: "Platine nue", price: 0 },
+                { name: "Platine axes démontables Ø50-60", price: 850 },
+                { name: "Platine axes soudés", price: 850 },
+                { name: "Platine Morin M3", price: 900 },
+                { name: "Platine CR70 Cangini", price: 900 },
+                { name: "Platine S45/S50", price: 350 },
+                { name: "Platine MARTIN M10", price: 850 },
+                { name: "Platine Klac F", price: 900 },
+                { name: "Platine Verachtert CW10", price: 900 },
+                { name: "Platine Lehnhoff MS10", price: 850 },
+                { name: "Platine Arden QA21", price: 900 }
+            ]
+        };
+
+        // Options platines pour Dent de déroctage (axes démontables et soudés à 0€)
+        const platinesDent = {
+            T12: [
+                { name: "Platine axes démontables Ø25-30", price: 0 },
+                { name: "Platine axes soudés", price: 0 },
+                { name: "Platine Morin M0", price: 250 },
+                { name: "Platine CR15 Cangini", price: 250 },
+                { name: "Platine S30", price: 0 },
+                { name: "Platine MARTIN M01", price: 200 },
+                { name: "Platine Klac C", price: 250 },
+                { name: "Platine Verachtert CW05", price: 250 },
+                { name: "Platine Lehnhoff MS01", price: 200 },
+                { name: "Platine Arden QA05", price: 300 }
+            ],
+            T23: [
+                { name: "Platine axes démontables Ø35-40", price: 0 },
+                { name: "Platine axes soudés", price: 0 },
+                { name: "Platine Morin M1", price: 300 },
+                { name: "Platine CR30 Cangini", price: 300 },
+                { name: "Platine S40", price: 0 },
+                { name: "Platine MARTIN M03", price: 300 },
+                { name: "Platine Klac D", price: 300 },
+                { name: "Platine Verachtert CW05", price: 300 },
+                { name: "Platine Lehnhoff MS03", price: 200 },
+                { name: "Platine Arden QA11", price: 300 }
+            ],
+            T35: [
+                { name: "Platine axes démontables Ø40-45", price: 0 },
+                { name: "Platine axes soudés", price: 0 },
+                { name: "Platine Morin M2", price: 350 },
+                { name: "Platine CR50 Cangini", price: 380 },
+                { name: "Platine S40", price: 0 },
+                { name: "Platine MARTIN M10", price: 300 },
+                { name: "Platine Klac E", price: 350 },
+                { name: "Platine Verachtert CW10", price: 350 },
+                { name: "Platine Lehnhoff MS03", price: 300 },
+                { name: "Platine Arden QA11", price: 400 }
+            ],
+            T810: [
+                { name: "Platine axes démontables Ø50-60", price: 0 },
+                { name: "Platine axes soudés", price: 0 },
+                { name: "Platine Morin M3", price: 450 },
+                { name: "Platine CR70 Cangini", price: 450 },
+                { name: "Platine S45/S50", price: 0 },
+                { name: "Platine MARTIN M10", price: 400 },
+                { name: "Platine Klac F", price: 450 },
+                { name: "Platine Verachtert CW10", price: 450 },
+                { name: "Platine Lehnhoff MS10", price: 400 },
+                { name: "Platine Arden QA21", price: 550 }
+            ],
+            T1215: [
+                { name: "Platine axes démontables Ø50-60", price: 0 },
+                { name: "Platine axes soudés", price: 0 },
+                { name: "Platine Morin M3", price: 550 },
+                { name: "Platine CR70 Cangini", price: 550 },
+                { name: "Platine S45/S50", price: 0 },
+                { name: "Platine MARTIN M10", price: 500 },
+                { name: "Platine Klac F", price: 550 },
+                { name: "Platine Verachtert CW10", price: 550 },
+                { name: "Platine Lehnhoff MS10", price: 500 },
+                { name: "Platine Arden QA21", price: 550 }
+            ]
+        };
+
+        // Base de données des produits
+        const products = [
+            // Pince multifonctions à bois (4 modèles)
+            { 
+                id: 1, 
+                name: "Pince multifonctions à bois UGM15", 
+                category: "bois", 
+                price: 2750, 
+                image: "images/GRAPPIN .jpeg", 
+                description: "Rotation 360° pour porteurs de 1,5T à 2,5T (T12). Flexibles inclus *hors push pull",
+                taille: "T12",
+                hasPlatine: true,
+                stock: true 
+            },
+            { 
+                id: 2, 
+                name: "Pince multifonctions à bois UGM30", 
+                category: "bois", 
+                price: 3060, 
+                image: "images/GRAPPIN .jpeg", 
+                description: "Rotation 360° pour porteurs de 2,5T à 4T (T23). Flexibles inclus *hors push pull",
+                taille: "T23",
+                hasPlatine: true,
+                stock: true 
+            },
+            { 
+                id: 3, 
+                name: "Pince multifonctions à bois UGM50", 
+                category: "bois", 
+                price: 4410, 
+                image: "images/GRAPPIN .jpeg", 
+                description: "Rotation 360° pour porteurs de 4T à 6T (T35). Flexibles inclus *hors push pull",
+                taille: "T35",
+                hasPlatine: true,
+                stock: true 
+            },
+            { 
+                id: 4, 
+                name: "Pince multifonctions à bois UGM80", 
+                category: "bois", 
+                price: 4780, 
+                image: "images/GRAPPIN .jpeg", 
+                description: "Rotation 360° pour porteurs de 8T à 12T (T810). Flexibles inclus *hors push pull",
+                taille: "T810",
+                hasPlatine: true,
+                stock: true 
+            },
+            // Brise roche hydraulique (7 modèles)
+            { 
+                id: 5, 
+                name: "Brise roche hydraulique UB60H", 
+                category: "brh", 
+                price: 2230, 
+                image: "images/BRISE ROCHE .jpeg", 
+                description: "Pour porteurs de 1T (T01). Inclus: 2 pointes pics, flexibles avec protection, kit d'entretien avec outils et recharge azote",
+                taille: "T01",
+                hasPlatine: true,
+                stock: true 
+            },
+            { 
+                id: 6, 
+                name: "Brise roche hydraulique UB80H", 
+                category: "brh", 
+                price: 2320, 
+                image: "images/BRISE ROCHE .jpeg", 
+                description: "Pour porteurs de 1,5T à 2T (T12). Inclus: 2 pointes pics, flexibles avec protection, kit d'entretien avec outils et recharge azote",
+                taille: "T12",
+                hasPlatine: true,
+                stock: true 
+            },
+            { 
+                id: 7, 
+                name: "Brise roche hydraulique UB120H", 
+                category: "brh", 
+                price: 2430, 
+                image: "images/BRISE ROCHE .jpeg", 
+                description: "Pour porteurs de 2,5T à 3,5T (T23). Inclus: 2 pointes pics, flexibles avec protection, kit d'entretien avec outils et recharge azote",
+                taille: "T23",
+                hasPlatine: true,
+                stock: true 
+            },
+            { 
+                id: 8, 
+                name: "Brise roche hydraulique UB200H", 
+                category: "brh", 
+                price: 3160, 
+                image: "images/BRISE ROCHE .jpeg", 
+                description: "Pour porteurs de 4T (T34). Inclus: 2 pointes pics, flexibles avec protection, kit d'entretien avec outils et recharge azote",
+                taille: "T34",
+                hasPlatine: true,
+                stock: true 
+            },
+            { 
+                id: 9, 
+                name: "Brise roche hydraulique UB280H", 
+                category: "brh", 
+                price: 3230, 
+                image: "images/BRISE ROCHE .jpeg", 
+                description: "Pour porteurs de 4T à 6T (T35). Inclus: 2 pointes pics, flexibles avec protection, kit d'entretien avec outils et recharge azote",
+                taille: "T35",
+                hasPlatine: true,
+                stock: true 
+            },
+            { 
+                id: 10, 
+                name: "Brise roche hydraulique UB400H", 
+                category: "brh", 
+                price: 3980, 
+                image: "images/BRISE ROCHE .jpeg", 
+                description: "Pour porteurs de 8T à 10T (T810). Inclus: 2 pointes pics, flexibles avec protection, kit d'entretien avec outils et recharge azote",
+                taille: "T810",
+                hasPlatine: true,
+                stock: true 
+            },
+            { 
+                id: 11, 
+                name: "Brise roche hydraulique UB1000H", 
+                category: "brh", 
+                price: 9950, 
+                image: "images/BRISE ROCHE .jpeg", 
+                description: "Pour porteurs de 13T à 15T (T1215). Inclus: 2 pointes pics, flexibles avec protection, kit d'entretien avec outils et recharge azote",
+                taille: "T1215",
+                hasPlatine: true,
+                stock: true 
+            },
+            // Godet peigne (4 modèles)
+            { 
+                id: 12, 
+                name: "Godet peigne 1000mm", 
+                category: "peigne", 
+                price: 640, 
+                image: "images/GODET RATEAU .jpeg", 
+                description: "Pour porteurs de 1,5T à 2T (T12)",
+                taille: "T12",
+                hasPlatine: true,
+                stock: false 
+            },
+            { 
+                id: 13, 
+                name: "Godet peigne 1200mm", 
+                category: "peigne", 
+                price: 700, 
+                image: "images/GODET RATEAU .jpeg", 
+                description: "Pour porteurs de 2,5T à 3,5T (T23)",
+                taille: "T23",
+                hasPlatine: true,
+                stock: false 
+            },
+            { 
+                id: 14, 
+                name: "Godet peigne 1400mm", 
+                category: "peigne", 
+                price: 950, 
+                image: "images/GODET RATEAU .jpeg", 
+                description: "Pour porteurs de 3,5T à 6T (T35)",
+                taille: "T35",
+                hasPlatine: true,
+                stock: false 
+            },
+            { 
+                id: 15, 
+                name: "Godet peigne 1600mm", 
+                category: "peigne", 
+                price: 1100, 
+                image: "images/GODET RATEAU .jpeg", 
+                description: "Pour porteurs de 8T à 10T (T810)",
+                taille: "T810",
+                hasPlatine: true,
+                stock: false 
+            },
+            // Godet râteau curage (4 modèles)
+            { 
+                id: 16, 
+                name: "Godet râteau curage 1000mm", 
+                category: "rateau", 
+                price: 770, 
+                image: "images/Godet rateau curage.jpeg", 
+                description: "Pour porteurs de 1,5T à 2T (T12)",
+                taille: "T12",
+                hasPlatine: true,
+                stock: false 
+            },
+            { 
+                id: 17, 
+                name: "Godet râteau curage 1200mm", 
+                category: "rateau", 
+                price: 1035, 
+                image: "images/Godet rateau curage.jpeg", 
+                description: "Pour porteurs de 2,5T à 3,5T (T23)",
+                taille: "T23",
+                hasPlatine: true,
+                stock: false 
+            },
+            { 
+                id: 18, 
+                name: "Godet râteau curage 1400mm", 
+                category: "rateau", 
+                price: 1210, 
+                image: "images/Godet rateau curage.jpeg", 
+                description: "Pour porteurs de 3,5T à 6T (T35)",
+                taille: "T35",
+                hasPlatine: true,
+                stock: false 
+            },
+            { 
+                id: 19, 
+                name: "Godet râteau curage 1600mm", 
+                category: "rateau", 
+                price: 1380, 
+                image: "images/Godet rateau curage.jpeg", 
+                description: "Pour porteurs de 8T à 10T (T810)",
+                taille: "T810",
+                hasPlatine: true,
+                stock: false 
+            },
+            // Godet curage inclinable (6 modèles)
+            { 
+                id: 25, 
+                name: "Godet curage inclinable 1000mm", 
+                category: "inclinable", 
+                price: 1270, 
+                image: "images/GODET CURAGE INCLINABLE.jpeg", 
+                description: "1 vérin - lame lisse pour porteurs de 1,5 à 2T (T12)",
+                taille: "T12",
+                hasPlatine: true,
+                stock: true 
+            },
+            { 
+                id: 26, 
+                name: "Godet curage inclinable 1200mm", 
+                category: "inclinable", 
+                price: 1620, 
+                image: "images/GODET CURAGE INCLINABLE.jpeg", 
+                description: "1 vérin protégé - contre lame boulonnée réversible pour porteurs de 2,5 à 3,5T (T23)",
+                taille: "T23",
+                hasPlatine: true,
+                stock: true 
+            },
+            { 
+                id: 27, 
+                name: "Godet curage inclinable 1200mm", 
+                category: "inclinable", 
+                price: 1920, 
+                image: "images/GODET CURAGE INCLINABLE.jpeg", 
+                description: "1 vérin protégé - contre lame boulonnée réversible pour porteurs de 3,5T (T34)",
+                taille: "T34",
+                hasPlatine: true,
+                stock: true 
+            },
+            { 
+                id: 28, 
+                name: "Godet curage inclinable 1400mm", 
+                category: "inclinable", 
+                price: 2120, 
+                image: "images/GODET CURAGE INCLINABLE.jpeg", 
+                description: "1 vérin protégé - contre lame boulonnée réversible pour porteurs de 4 à 6T (T35)",
+                taille: "T35",
+                hasPlatine: true,
+                stock: true 
+            },
+            { 
+                id: 29, 
+                name: "Godet curage inclinable 1500mm", 
+                category: "inclinable", 
+                price: 2200, 
+                image: "images/GODET CURAGE INCLINABLE.jpeg", 
+                description: "1 vérin protégé - contre lame boulonnée réversible pour porteurs de 4 à 6T (T35)",
+                taille: "T35",
+                hasPlatine: true,
+                stock: true 
+            },
+            { 
+                id: 30, 
+                name: "Godet curage inclinable 1600mm", 
+                category: "inclinable", 
+                price: 2600, 
+                image: "images/GODET CURAGE INCLINABLE.jpeg", 
+                description: "2 vérins protégés - contre lame boulonnée réversible pour porteurs de 8 à 10T (T810)",
+                taille: "T810",
+                hasPlatine: true,
+                stock: true 
+            },
+            // Dent de déroctage (5 modèles)
+            { 
+                id: 31, 
+                name: "Dent de ripper V13VY", 
+                category: "dent", 
+                price: 420, 
+                image: "images/Dent de déroctage .jpg", 
+                description: "Dent interchangeable pour porteurs de 1,5 à 2T (T12)",
+                taille: "T12",
+                hasPlatine: true,
+                stock: true 
+            },
+            { 
+                id: 32, 
+                name: "Dent de ripper V13VY", 
+                category: "dent", 
+                price: 630, 
+                image: "images/Dent de déroctage .jpg", 
+                description: "Dent interchangeable pour porteurs de 2,5 à 3,5T (T23)",
+                taille: "T23",
+                hasPlatine: true,
+                stock: true 
+            },
+            { 
+                id: 33, 
+                name: "Dent de ripper V17VY", 
+                category: "dent", 
+                price: 770, 
+                image: "images/Dent de déroctage .jpg", 
+                description: "Dent interchangeable pour porteurs de 4 à 6T (T35)",
+                taille: "T35",
+                hasPlatine: true,
+                stock: true 
+            },
+            { 
+                id: 34, 
+                name: "Dent de ripper V19VY", 
+                category: "dent", 
+                price: 1230, 
+                image: "images/Dent de déroctage .jpg", 
+                description: "Dent interchangeable pour porteurs de 8 à 10T (T810)",
+                taille: "T810",
+                hasPlatine: true,
+                stock: true 
+            },
+            { 
+                id: 35, 
+                name: "Dent de ripper V23VY", 
+                category: "dent", 
+                price: 2200, 
+                image: "images/Dent de déroctage .jpg", 
+                description: "Dent interchangeable pour porteurs de 12 à 15T (T1215)",
+                taille: "T1215",
+                hasPlatine: true,
+                stock: true 
+            },
+            // Godet Fleco sur mesure
+            { 
+                id: 50, 
+                name: "Godet Fleco sur mesure", 
+                category: "fleco", 
+                price: 1000, 
+                image: "images/GODET FLECO.jpeg", 
+                description: "Godet Fleco personnalisable - Choisissez votre taille, nombre de branches et options",
+                hasFleco: true,
+                hasPlatine: false,
+                stock: true 
+            },
+            // Kits à souder (3 produits avec liste déroulante)
+            { 
+                id: 36, 
+                name: "Kit à souder CANGINI", 
+                category: "kit", 
+                price: 190, 
+                image: "images/KIT A SOUDER CANGINI .jpeg", 
+                description: "Kit à souder pour attache rapide CANGINI",
+                hasKitOptions: true,
+                kitType: "cangini",
+                hasPlatine: false,
+                stock: true 
+            },
+            { 
+                id: 37, 
+                name: "Kit à souder MARTIN", 
+                category: "kit", 
+                price: 90, 
+                image: "images/KITS A SOUDER MARTIN .jpeg", 
+                description: "Kit à souder pour attache rapide MARTIN",
+                hasKitOptions: true,
+                kitType: "martin",
+                hasPlatine: false,
+                stock: true 
+            },
+            { 
+                id: 38, 
+                name: "Kit à souder SYSTEME S", 
+                category: "kit", 
+                price: 90, 
+                image: "images/KIT A SOUDER SYSTEME S .jpeg", 
+                description: "Kit à souder pour attache rapide SYSTEME S",
+                hasKitOptions: true,
+                kitType: "systemes",
+                hasPlatine: false,
+                stock: true 
+            },
+            // Pince de tri (5 modèles)
+            { 
+                id: 20, 
+                name: "Pince de tri UG350", 
+                category: "pince", 
+                price: 3790, 
+                image: "images/PINCE DE TRI UG500.jpeg", 
+                description: "Rotation 360° pour porteurs de 1,5T à 2,5T (T12)",
+                taille: "T12",
+                hasPlatine: true,
+                stock: true 
+            },
+            { 
+                id: 21, 
+                name: "Pince de tri UG400", 
+                category: "pince", 
+                price: 4285, 
+                image: "images/PINCE DE TRI UG500.jpeg", 
+                description: "Rotation 360° pour porteurs de 2,5T à 4T (T23)",
+                taille: "T23",
+                hasPlatine: true,
+                stock: true 
+            },
+            { 
+                id: 22, 
+                name: "Pince de tri UG500", 
+                category: "pince", 
+                price: 5570, 
+                image: "images/PINCE DE TRI UG500.jpeg", 
+                description: "Rotation 360° pour porteurs de 4T à 6T (T35)",
+                taille: "T35",
+                hasPlatine: true,
+                stock: true 
+            },
+            { 
+                id: 23, 
+                name: "Pince de tri UG600", 
+                category: "pince", 
+                price: 6390, 
+                image: "images/PINCE DE TRI UG500.jpeg", 
+                description: "Rotation 360° pour porteurs de 8T à 12T (T810)",
+                taille: "T810",
+                hasPlatine: true,
+                stock: true 
+            },
+            { 
+                id: 24, 
+                name: "Pince de tri UG900", 
+                category: "pince", 
+                price: 9920, 
+                image: "images/pince de tri.jpeg", 
+                description: "Rotation 360° pour porteurs de 14T à 18T (T1215)",
+                taille: "T1215",
+                hasPlatine: true,
+                stock: true 
+            }
+        ];
+
+        let cart = JSON.parse(localStorage.getItem('locasteel_cart')) || [];
+        let currentFilter = 'all';
+
+        // Fonction pour calculer les frais de transport dégressifs
+        function calculateTransport(subtotal) {
+            let rate;
+            if (subtotal <= 100) {
+                rate = 0.30; // 30%
+            } else if (subtotal <= 250) {
+                rate = 0.20; // 20%
+            } else if (subtotal <= 500) {
+                rate = 0.15; // 15%
+            } else if (subtotal <= 1000) {
+                rate = 0.10; // 10%
+            } else if (subtotal <= 2000) {
+                rate = 0.08; // 8%
+            } else if (subtotal <= 4000) {
+                rate = 0.06; // 6%
+            } else {
+                rate = 0.05; // 5%
+            }
+            return {
+                amount: Math.round(subtotal * rate),
+                rate: Math.round(rate * 100)
+            };
+        }
+
+        // Fonction pour extraire le texte des porteurs
+        function getPorteursText(product) {
+            const tailleMap = {
+                'T01': 'Porteurs de 1T',
+                'T12': 'Porteurs de 1,5T à 2,5T',
+                'T23': 'Porteurs de 2,5T à 4T',
+                'T34': 'Porteurs de 4T',
+                'T35': 'Porteurs de 4T à 6T',
+                'T810': 'Porteurs de 8T à 12T',
+                'T1215': 'Porteurs de 13T à 18T'
+            };
+            return tailleMap[product.taille] || '';
+        }
+
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', () => {
+            initEnginSelector();
+            renderProducts();
+            updateCartUI();
+            document.getElementById('checkout-form').addEventListener('submit', handleCheckout);
+        });
+
+        // Initialiser le sélecteur d'engin
+        function initEnginSelector() {
+            const selectMarque = document.getElementById('select-marque');
+            const marques = Object.keys(enginsDatabase).sort();
+            
+            marques.forEach(marque => {
+                const option = document.createElement('option');
+                option.value = marque;
+                option.textContent = marque;
+                selectMarque.appendChild(option);
+            });
+        }
+
+        // Mettre à jour les modèles selon la marque sélectionnée
+        function updateModeles() {
+            const selectMarque = document.getElementById('select-marque');
+            const selectModele = document.getElementById('select-modele');
+            const marque = selectMarque.value;
+            
+            selectModele.innerHTML = '<option value="">-- Sélectionnez un modèle --</option>';
+            
+            if (marque && enginsDatabase[marque]) {
+                selectModele.disabled = false;
+                enginsDatabase[marque].forEach(engin => {
+                    const option = document.createElement('option');
+                    option.value = engin.taille;
+                    option.dataset.poids = engin.poids;
+                    option.textContent = `${engin.modele} (${engin.poids})`;
+                    selectModele.appendChild(option);
+                });
+            } else {
+                selectModele.disabled = true;
+            }
+            
+            // Réinitialiser le filtre
+            selectedTaille = null;
+            document.getElementById('engin-info').classList.add('hidden');
+            renderProducts();
+        }
+
+        // Filtrer les produits selon l'engin sélectionné
+        function filterByEngin() {
+            const selectMarque = document.getElementById('select-marque');
+            const selectModele = document.getElementById('select-modele');
+            const enginInfo = document.getElementById('engin-info');
+            
+            if (selectModele.value) {
+                selectedTaille = selectModele.value;
+                const marque = selectMarque.value;
+                const modeleText = selectModele.options[selectModele.selectedIndex].textContent;
+                
+                enginInfo.innerHTML = `<i class="fas fa-check-circle text-green-500 mr-2"></i>Affichage des accessoires compatibles avec votre <strong>${marque} ${modeleText}</strong>`;
+                enginInfo.classList.remove('hidden');
+            } else {
+                selectedTaille = null;
+                enginInfo.classList.add('hidden');
+            }
+            
+            renderProducts();
+        }
+
+        // Réinitialiser le filtre d'engin
+        function resetEnginFilter() {
+            document.getElementById('select-marque').value = '';
+            document.getElementById('select-modele').innerHTML = '<option value="">-- Sélectionnez un modèle --</option>';
+            document.getElementById('select-modele').disabled = true;
+            document.getElementById('engin-info').classList.add('hidden');
+            selectedTaille = null;
+            renderProducts();
+        }
+
+        // Afficher les produits
+        function renderProducts() {
+            const grid = document.getElementById('products-grid');
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            
+            let filteredProducts = products.filter(p => {
+                const matchesFilter = currentFilter === 'all' || p.category === currentFilter;
+                const matchesSearch = p.name.toLowerCase().includes(searchTerm) || p.description.toLowerCase().includes(searchTerm);
+                const matchesTaille = !selectedTaille || p.taille === selectedTaille;
+                return matchesFilter && matchesSearch && matchesTaille;
+            });
+
+            if (filteredProducts.length === 0) {
+                grid.innerHTML = '';
+                document.getElementById('no-products').classList.remove('hidden');
+                return;
+            }
+
+            document.getElementById('no-products').classList.add('hidden');
+            
+            grid.innerHTML = filteredProducts.map(product => {
+                const platineOptions = product.hasPlatine ? (
+                    (product.category === 'pince' || product.category === 'brh' || product.category === 'bois') && platinesMajorees[product.taille] ? platinesMajorees[product.taille] :
+                    product.category === 'inclinable' && platinesInclinable[product.taille] ? platinesInclinable[product.taille] : 
+                    product.category === 'dent' && platinesDent[product.taille] ? platinesDent[product.taille] : 
+                    platinesOptions[product.taille] || []
+                ) : [];
+                
+                return `
+                <div class="product-card bg-white rounded-xl overflow-hidden shadow-lg" data-category="${product.category}">
+                    <div class="aspect-video bg-steel-100 flex items-center justify-center overflow-hidden">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover" onerror="this.onerror=null; this.src=''; this.parentElement.innerHTML='<i class=\\'fas fa-cog text-6xl text-steel-300\\'></i>';">
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-lg text-steel-800 mb-1">${product.name}</h3>
+                        <p class="text-sm font-semibold text-red-500 mb-2">${getPorteursText(product)}</p>
+                        <p class="text-sm text-steel-500 mb-2">${product.description}</p>
+                        <div class="flex flex-wrap items-center gap-2 mb-4 text-xs">
+                            ${product.stock ? 
+                                '<span class="inline-flex items-center bg-green-100 text-green-700 px-2 py-1 rounded-full"><i class="fas fa-check-circle mr-1"></i>En stock : sous 8 jours (adaptation attelage)</span>' : 
+                                '<span class="inline-flex items-center bg-orange-100 text-orange-700 px-2 py-1 rounded-full"><i class="fas fa-clock mr-1"></i>Délai : 6 semaines</span>'
+                            }
+                            <span class="text-steel-400 italic">*sauf rupture de stock</span>
+                        </div>
+                        
+                        ${product.hasFleco ? `
+                        <div class="space-y-3">
+                            <div>
+                                <label class="block text-sm font-medium text-steel-700 mb-1">1. Taille du godet :</label>
+                                <select id="fleco-taille-${product.id}" class="w-full px-3 py-2 border border-steel-200 rounded-lg text-sm focus:ring-2 focus:ring-red-500 focus:outline-none" onchange="updateFlecoBranches(${product.id})">
+                                    ${flecoOptions.tailles.map((t, i) => `<option value="${t.value}" data-index="${i}">${t.name}</option>`).join('')}
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-steel-700 mb-1">2. Nombre de branches :</label>
+                                <select id="fleco-branches-${product.id}" class="w-full px-3 py-2 border border-steel-200 rounded-lg text-sm focus:ring-2 focus:ring-red-500 focus:outline-none" onchange="updateFlecoPrice(${product.id})">
+                                    ${flecoOptions.branches.T12.map((b, i) => `<option value="${i}" data-price="${b.price}">${b.name} - ${b.price.toLocaleString('fr-FR')} € HT</option>`).join('')}
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-steel-700 mb-1">3. Dents interchangeables :</label>
+                                <select id="fleco-dents-${product.id}" class="w-full px-3 py-2 border border-steel-200 rounded-lg text-sm focus:ring-2 focus:ring-red-500 focus:outline-none" onchange="updateFlecoPrice(${product.id})">
+                                    <option value="none" data-price="0">Sans dents interchangeables (inclus)</option>
+                                    ${flecoOptions.dents.T12.map((d, i) => `<option value="${i}" data-price="${d.price}">Avec dents ${d.name} (+${d.price.toLocaleString('fr-FR')} €)</option>`).join('')}
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-steel-700 mb-1">4. Reprise attache rapide :</label>
+                                <select id="fleco-reprise-${product.id}" class="w-full px-3 py-2 border border-steel-200 rounded-lg text-sm focus:ring-2 focus:ring-red-500 focus:outline-none" onchange="updateFlecoPrice(${product.id})">
+                                    <option value="none" data-price="0">Reprise sur axes (inclus)</option>
+                                    <option value="reprise" data-price="${flecoOptions.reprise.T12.price}">${flecoOptions.reprise.T12.name} (+${flecoOptions.reprise.T12.price.toLocaleString('fr-FR')} €)</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3 mb-3 mt-4">
+                            <label class="text-sm font-medium text-steel-700">Quantité :</label>
+                            <div class="flex items-center border border-steel-200 rounded-lg">
+                                <button type="button" onclick="changeQuantity(${product.id}, -1)" class="px-3 py-1 text-steel-600 hover:bg-steel-100 rounded-l-lg"><i class="fas fa-minus"></i></button>
+                                <input type="number" id="qty-${product.id}" value="1" min="1" max="99" class="w-12 text-center border-0 focus:ring-0 text-steel-800 font-medium" onchange="updateFlecoPrice(${product.id})">
+                                <button type="button" onclick="changeQuantity(${product.id}, 1)" class="px-3 py-1 text-steel-600 hover:bg-steel-100 rounded-r-lg"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-3">
+                            <div>
+                                <span class="text-2xl font-bold text-red-500" id="price-${product.id}">${product.price.toLocaleString('fr-FR')} €</span>
+                                <span class="text-sm text-steel-500 block">HT</span>
+                            </div>
+                            <button onclick="addFlecoToCart(${product.id})" class="bg-red-500 text-white px-5 py-3 rounded-lg font-medium hover:bg-red-600 transition">
+                                <i class="fas fa-cart-plus mr-2"></i>Ajouter
+                            </button>
+                        </div>
+                        ` : product.taille === 'T1215' ? `
+                        <div class="text-center py-4">
+                            <p class="text-lg font-bold text-steel-700 mb-3">Prix sur demande</p>
+                            <a href="mailto:contact@locasteel.com?subject=Demande de devis - ${product.name}" class="inline-block bg-red-500 text-white px-6 py-3 rounded-lg font-medium hover:bg-red-600 transition">
+                                <i class="fas fa-envelope mr-2"></i>Nous contacter
+                            </a>
+                        </div>
+                        ` : `
+                        ${product.hasKitOptions ? `
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-steel-700 mb-1">Choix du modèle :</label>
+                            <select id="kit-${product.id}" class="w-full px-3 py-2 border border-steel-200 rounded-lg text-sm focus:ring-2 focus:ring-red-500 focus:outline-none" onchange="updateKitPrice(${product.id}, '${product.kitType}')">
+                                ${kitOptions[product.kitType].map((k, i) => `<option value="${i}" data-price="${k.price}">${k.name} - ${k.price.toLocaleString('fr-FR')} € HT</option>`).join('')}
+                            </select>
+                        </div>
+                        ` : ''}
+                        
+                        ${product.hasPlatine && platineOptions.length > 0 ? `
+                        <div class="mb-4">
+                            <label class="block text-sm font-medium text-steel-700 mb-1">${(product.category === 'peigne' || product.category === 'rateau' || product.category === 'inclinable' || product.category === 'dent') ? 'Choix du supplément :' : 'Choix de la platine :'}</label>
+                            <select id="platine-${product.id}" class="w-full px-3 py-2 border border-steel-200 rounded-lg text-sm focus:ring-2 focus:ring-red-500 focus:outline-none" onchange="updateProductPrice(${product.id})">
+                                ${platineOptions.map((p, i) => `<option value="${i}" data-price="${p.price}">${(product.category === 'peigne' || product.category === 'rateau' || product.category === 'inclinable' || product.category === 'dent') ? p.name.replace('Platine', 'Supplément') : p.name} ${p.price > 0 ? '(+' + p.price.toLocaleString('fr-FR') + ' €)' : '(inclus)'}</option>`).join('')}
+                            </select>
+                        </div>
+                        ` : ''}
+                        
+                        ${product.hasSupplementAttache ? `
+                        <div class="mb-4">
+                            <label class="flex items-center text-sm text-steel-700">
+                                <input type="checkbox" id="supplement-${product.id}" class="mr-2 rounded text-red-500 focus:ring-red-500" onchange="updateProductPrice(${product.id})">
+                                Supplément attache MORIN, CANGINI, LEHNHOFF, ARDEN (+250 €)
+                            </label>
+                        </div>
+                        ` : ''}
+                        
+                        <div class="flex items-center gap-3 mb-3">
+                            <label class="text-sm font-medium text-steel-700">Quantité :</label>
+                            <div class="flex items-center border border-steel-200 rounded-lg">
+                                <button type="button" onclick="changeQuantity(${product.id}, -1)" class="px-3 py-1 text-steel-600 hover:bg-steel-100 rounded-l-lg">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <input type="number" id="qty-${product.id}" value="1" min="1" max="99" class="w-12 text-center border-0 focus:ring-0 text-steel-800 font-medium" onchange="updateProductPrice(${product.id})">
+                                <button type="button" onclick="changeQuantity(${product.id}, 1)" class="px-3 py-1 text-steel-600 hover:bg-steel-100 rounded-r-lg">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <span class="text-2xl font-bold text-red-500" id="price-${product.id}">${product.price.toLocaleString('fr-FR')} €</span>
+                                <span class="text-sm text-steel-500 block">HT</span>
+                            </div>
+                            <button onclick="addToCart(${product.id})" class="bg-red-500 text-white px-5 py-3 rounded-lg font-medium hover:bg-red-600 transition">
+                                <i class="fas fa-cart-plus mr-2"></i>Ajouter
+                            </button>
+                        </div>
+                        `}
+                    </div>
+                </div>
+            `}).join('');
+        }
+
+        // Changer la quantité
+        function changeQuantity(productId, delta) {
+            const qtyInput = document.getElementById(`qty-${productId}`);
+            if (qtyInput) {
+                let newQty = parseInt(qtyInput.value) + delta;
+                if (newQty < 1) newQty = 1;
+                if (newQty > 99) newQty = 99;
+                qtyInput.value = newQty;
+                updateProductPrice(productId);
+            }
+        }
+
+        // Mettre à jour le prix affiché
+        function updateProductPrice(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+            
+            let unitPrice = product.price;
+            
+            // Ajouter le prix de la platine
+            const platineSelect = document.getElementById(`platine-${productId}`);
+            if (platineSelect) {
+                const selectedOption = platineSelect.options[platineSelect.selectedIndex];
+                unitPrice += parseInt(selectedOption.dataset.price) || 0;
+            }
+            
+            // Ajouter le supplément attache
+            const supplementCheck = document.getElementById(`supplement-${productId}`);
+            if (supplementCheck && supplementCheck.checked) {
+                unitPrice += supplementAttache.price;
+            }
+            
+            // Multiplier par la quantité
+            const qtyInput = document.getElementById(`qty-${productId}`);
+            const quantity = qtyInput ? parseInt(qtyInput.value) || 1 : 1;
+            const totalPrice = unitPrice * quantity;
+            
+            document.getElementById(`price-${productId}`).textContent = totalPrice.toLocaleString('fr-FR') + ' €';
+        }
+
+        // Mettre à jour le prix du kit à souder
+        function updateKitPrice(productId, kitType) {
+            const kitSelect = document.getElementById(`kit-${productId}`);
+            if (kitSelect) {
+                const selectedOption = kitSelect.options[kitSelect.selectedIndex];
+                const unitPrice = parseInt(selectedOption.dataset.price) || 0;
+                
+                // Multiplier par la quantité
+                const qtyInput = document.getElementById(`qty-${productId}`);
+                const quantity = qtyInput ? parseInt(qtyInput.value) || 1 : 1;
+                const totalPrice = unitPrice * quantity;
+                
+                document.getElementById(`price-${productId}`).textContent = totalPrice.toLocaleString('fr-FR') + ' €';
+            }
+        }
+
+        // Fonctions pour Godet Fleco sur mesure
+        function updateFlecoBranches(productId) {
+            const tailleSelect = document.getElementById(`fleco-taille-${productId}`);
+            const branchesSelect = document.getElementById(`fleco-branches-${productId}`);
+            const dentsSelect = document.getElementById(`fleco-dents-${productId}`);
+            const repriseSelect = document.getElementById(`fleco-reprise-${productId}`);
+            
+            const taille = tailleSelect.value;
+            const branches = flecoOptions.branches[taille];
+            const dents = flecoOptions.dents[taille];
+            const reprise = flecoOptions.reprise[taille];
+            
+            // Mettre à jour les branches
+            branchesSelect.innerHTML = branches.map((b, i) => 
+                `<option value="${i}" data-price="${b.price}">${b.name} - ${b.price.toLocaleString('fr-FR')} € HT</option>`
+            ).join('');
+            
+            // Mettre à jour les dents
+            dentsSelect.innerHTML = `<option value="none" data-price="0">Sans dents interchangeables (inclus)</option>` +
+                dents.map((d, i) => `<option value="${i}" data-price="${d.price}">Avec dents ${d.name} (+${d.price.toLocaleString('fr-FR')} €)</option>`).join('');
+            
+            // Mettre à jour la reprise
+            repriseSelect.innerHTML = `
+                <option value="none" data-price="0">Reprise sur axes (inclus)</option>
+                <option value="reprise" data-price="${reprise.price}">${reprise.name} (+${reprise.price.toLocaleString('fr-FR')} €)</option>
+            `;
+            
+            updateFlecoPrice(productId);
+        }
+
+        function updateFlecoPrice(productId) {
+            const branchesSelect = document.getElementById(`fleco-branches-${productId}`);
+            const dentsSelect = document.getElementById(`fleco-dents-${productId}`);
+            const repriseSelect = document.getElementById(`fleco-reprise-${productId}`);
+            const qtyInput = document.getElementById(`qty-${productId}`);
+            
+            let basePrice = parseInt(branchesSelect.options[branchesSelect.selectedIndex].dataset.price) || 0;
+            let dentsPrice = parseInt(dentsSelect.options[dentsSelect.selectedIndex].dataset.price) || 0;
+            let reprisePrice = parseInt(repriseSelect.options[repriseSelect.selectedIndex].dataset.price) || 0;
+            
+            const quantity = qtyInput ? parseInt(qtyInput.value) || 1 : 1;
+            const totalPrice = (basePrice + dentsPrice + reprisePrice) * quantity;
+            
+            document.getElementById(`price-${productId}`).textContent = totalPrice.toLocaleString('fr-FR') + ' €';
+        }
+
+        function addFlecoToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+            
+            const tailleSelect = document.getElementById(`fleco-taille-${productId}`);
+            const branchesSelect = document.getElementById(`fleco-branches-${productId}`);
+            const dentsSelect = document.getElementById(`fleco-dents-${productId}`);
+            const repriseSelect = document.getElementById(`fleco-reprise-${productId}`);
+            const qtyInput = document.getElementById(`qty-${productId}`);
+            
+            const taille = tailleSelect.options[tailleSelect.selectedIndex].text;
+            const branches = branchesSelect.options[branchesSelect.selectedIndex].text.split(' - ')[0];
+            const dentsValue = dentsSelect.value;
+            const repriseValue = repriseSelect.value;
+            
+            let basePrice = parseInt(branchesSelect.options[branchesSelect.selectedIndex].dataset.price) || 0;
+            let dentsPrice = parseInt(dentsSelect.options[dentsSelect.selectedIndex].dataset.price) || 0;
+            let reprisePrice = parseInt(repriseSelect.options[repriseSelect.selectedIndex].dataset.price) || 0;
+            
+            const quantity = qtyInput ? parseInt(qtyInput.value) || 1 : 1;
+            const unitPrice = basePrice + dentsPrice + reprisePrice;
+            const totalPrice = unitPrice * quantity;
+            
+            let options = [];
+            options.push({ name: `Taille: ${taille}`, price: 0 });
+            options.push({ name: `Branches: ${branches}`, price: basePrice });
+            if (dentsValue !== 'none') {
+                options.push({ name: dentsSelect.options[dentsSelect.selectedIndex].text, price: dentsPrice });
+            }
+            if (repriseValue !== 'none') {
+                options.push({ name: 'Reprise attache rapide', price: reprisePrice });
+            }
+            
+            const cartItem = {
+                id: Date.now(),
+                productId: product.id,
+                name: `Godet Fleco sur mesure - ${branches}`,
+                basePrice: basePrice,
+                totalPrice: totalPrice,
+                unitPrice: unitPrice,
+                options: options,
+                quantity: quantity
+            };
+            
+            cart.push(cartItem);
+            saveCart();
+            updateCartUI();
+            openCart();
+        }
+
+        // Filtrer les produits
+        function filterProducts(category) {
+            currentFilter = category;
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                if (btn.dataset.filter === category) {
+                    btn.classList.remove('bg-steel-100', 'text-steel-700');
+                    btn.classList.add('bg-red-500', 'text-white');
+                } else {
+                    btn.classList.remove('bg-red-500', 'text-white');
+                    btn.classList.add('bg-steel-100', 'text-steel-700');
+                }
+            });
+            
+            // Afficher/masquer la bannière ULK pour la catégorie Fleco
+            const ulkBanner = document.getElementById('ulk-banner');
+            if (category === 'fleco') {
+                ulkBanner.classList.remove('hidden');
+            } else {
+                ulkBanner.classList.add('hidden');
+            }
+            
+            renderProducts();
+        }
+
+        function searchProducts() {
+            renderProducts();
+        }
+
+        // Ajouter au panier
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+            
+            let totalPrice = product.price;
+            let options = [];
+            let itemName = product.name;
+            
+            // Récupérer le kit sélectionné
+            const kitSelect = document.getElementById(`kit-${productId}`);
+            if (kitSelect && product.hasKitOptions) {
+                const selectedOption = kitSelect.options[kitSelect.selectedIndex];
+                const kitPrice = parseInt(selectedOption.dataset.price) || 0;
+                const kitName = kitOptions[product.kitType][kitSelect.selectedIndex].name;
+                totalPrice = kitPrice;
+                itemName = `${product.name} - ${kitName}`;
+            }
+            
+            // Récupérer la platine sélectionnée
+            const platineSelect = document.getElementById(`platine-${productId}`);
+            if (platineSelect && product.hasPlatine) {
+                const selectedOption = platineSelect.options[platineSelect.selectedIndex];
+                const platinePrice = parseInt(selectedOption.dataset.price) || 0;
+                const platinesList = (product.category === 'pince' || product.category === 'brh' || product.category === 'bois') && platinesMajorees[product.taille] ? platinesMajorees[product.taille] : product.category === 'inclinable' && platinesInclinable[product.taille] ? platinesInclinable[product.taille] : product.category === 'dent' && platinesDent[product.taille] ? platinesDent[product.taille] : platinesOptions[product.taille];
+                const platineName = platinesList[platineSelect.selectedIndex].name;
+                totalPrice += platinePrice;
+                options.push({ name: platineName, price: platinePrice });
+            }
+            
+            // Récupérer le supplément attache
+            const supplementCheck = document.getElementById(`supplement-${productId}`);
+            if (supplementCheck && supplementCheck.checked) {
+                totalPrice += supplementAttache.price;
+                options.push({ name: supplementAttache.name, price: supplementAttache.price });
+            }
+            
+            // Récupérer la quantité
+            const qtyInput = document.getElementById(`qty-${productId}`);
+            const quantity = qtyInput ? parseInt(qtyInput.value) || 1 : 1;
+            
+            const cartItem = {
+                id: Date.now(),
+                productId: product.id,
+                name: itemName,
+                basePrice: product.price,
+                totalPrice: totalPrice * quantity,
+                unitPrice: totalPrice,
+                options: options,
+                quantity: quantity
+            };
+            
+            cart.push(cartItem);
+            saveCart();
+            updateCartUI();
+            openCart();
+        }
+
+        // Supprimer du panier
+        function removeFromCart(cartItemId) {
+            cart = cart.filter(item => item.id !== cartItemId);
+            saveCart();
+            updateCartUI();
+            renderCartItems();
+        }
+
+        // Sauvegarder le panier
+        function saveCart() {
+            localStorage.setItem('locasteel_cart', JSON.stringify(cart));
+        }
+
+        // Mettre à jour l'UI du panier
+        function updateCartUI() {
+            const count = cart.length;
+            const countEl = document.getElementById('cart-count');
+            const countMobileEl = document.getElementById('cart-count-mobile');
+            const checkoutBtn = document.getElementById('checkout-btn');
+            const payBtn = document.getElementById('pay-btn');
+            
+            if (count > 0) {
+                countEl.textContent = count;
+                countEl.classList.remove('hidden');
+                countMobileEl.textContent = count;
+                countMobileEl.classList.remove('hidden');
+                checkoutBtn.disabled = false;
+                payBtn.disabled = false;
+            } else {
+                countEl.classList.add('hidden');
+                countMobileEl.classList.add('hidden');
+                checkoutBtn.disabled = true;
+                payBtn.disabled = true;
+            }
+            
+            const subtotal = cart.reduce((sum, item) => sum + item.totalPrice, 0);
+            const transportInfo = calculateTransport(subtotal);
+            const totalHT = subtotal + transportInfo.amount;
+            const tva = totalHT * 0.20;
+            const totalTTC = totalHT + tva;
+            
+            document.getElementById('cart-total').innerHTML = `
+                <span class="text-sm text-steel-600">Sous-total: ${subtotal.toLocaleString('fr-FR')} €</span><br>
+                <span class="text-sm text-steel-600">Transport: ${transportInfo.amount.toLocaleString('fr-FR')} €</span><br>
+                <span class="text-lg font-bold">Total: ${totalHT.toLocaleString('fr-FR')} € HT</span>
+            `;
+            document.getElementById('cart-tva').textContent = tva.toLocaleString('fr-FR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' €';
+            document.getElementById('cart-total-ttc').textContent = totalTTC.toLocaleString('fr-FR', {minimumFractionDigits: 2, maximumFractionDigits: 2}) + ' €';
+            
+            renderCartItems();
+        }
+
+        // Afficher les articles du panier
+        function renderCartItems() {
+            const container = document.getElementById('cart-items');
+            
+            if (cart.length === 0) {
+                container.innerHTML = '<p class="text-steel-500 text-center py-8">Votre panier est vide</p>';
+                return;
+            }
+            
+            container.innerHTML = cart.map(item => `
+                <div class="flex gap-4 py-4 border-b border-steel-100">
+                    <div class="flex-1">
+                        <h4 class="font-medium text-steel-800">${item.name}</h4>
+                        <p class="text-xs text-steel-500">Quantité : ${item.quantity}</p>
+                        ${item.options.length > 0 ? `
+                            <ul class="text-xs text-steel-500 mt-1">
+                                ${item.options.map(opt => `<li>+ ${opt.name} ${opt.price > 0 ? '(' + opt.price.toLocaleString('fr-FR') + ' €)' : ''}</li>`).join('')}
+                            </ul>
+                        ` : ''}
+                        <p class="text-red-500 font-bold mt-2">${item.totalPrice.toLocaleString('fr-FR')} € HT</p>
+                    </div>
+                    <button onclick="removeFromCart(${item.id})" class="text-steel-400 hover:text-red-500">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        // Ouvrir/Fermer le panier
+        function openCart() {
+            document.getElementById('cart-sidebar').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCart() {
+            document.getElementById('cart-sidebar').classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // Formulaire de commande
+        function showCheckoutForm() {
+            closeCart();
+            const modal = document.getElementById('checkout-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            
+            // Résumé de la commande
+            const summary = document.getElementById('order-summary');
+            const subtotal = cart.reduce((sum, item) => sum + item.totalPrice, 0);
+            const transportInfo = calculateTransport(subtotal);
+            const total = subtotal + transportInfo.amount;
+            summary.innerHTML = `
+                <h4 class="font-bold text-steel-800 mb-2">Récapitulatif :</h4>
+                <ul class="text-sm text-steel-600 space-y-1">
+                    ${cart.map(item => `<li>• ${item.name} - ${item.totalPrice.toLocaleString('fr-FR')} € HT</li>`).join('')}
+                </ul>
+                <div class="mt-3 pt-3 border-t border-steel-200">
+                    <p class="text-sm text-steel-600">Sous-total: ${subtotal.toLocaleString('fr-FR')} € HT</p>
+                    <p class="text-sm text-steel-600">Frais de transport: ${transportInfo.amount.toLocaleString('fr-FR')} € HT</p>
+                    <p class="font-bold text-red-500 text-lg mt-1">Total: ${total.toLocaleString('fr-FR')} € HT</p>
+                </div>
+            `;
+        }
+
+        function closeCheckoutModal() {
+            const modal = document.getElementById('checkout-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Soumettre la commande
+        function handleCheckout(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const subtotal = cart.reduce((sum, item) => sum + item.totalPrice, 0);
+            const transportInfo = calculateTransport(subtotal);
+            const total = subtotal + transportInfo.amount;
+            
+            let orderDetails = cart.map(item => {
+                let details = `${item.name} - ${item.totalPrice.toLocaleString('fr-FR')} € HT`;
+                if (item.options.length > 0) {
+                    details += '\n  Options: ' + item.options.map(o => o.name).join(', ');
+                }
+                return details;
+            }).join('\n');
+            
+            const mailBody = `
+Nouvelle demande de devis LOCASTEEL
+
+Client:
+- Nom: ${formData.get('prenom')} ${formData.get('nom')}
+- Société: ${formData.get('societe') || 'Non renseigné'}
+- Email: ${formData.get('email')}
+- Téléphone: ${formData.get('telephone')}
+
+Message: ${formData.get('message') || 'Aucun message'}
+
+Produits demandés:
+${orderDetails}
+
+Sous-total: ${subtotal.toLocaleString('fr-FR')} € HT
+Frais de transport: ${transportInfo.amount.toLocaleString('fr-FR')} € HT
+TOTAL: ${total.toLocaleString('fr-FR')} € HT
+            `.trim();
+            
+            window.location.href = `mailto:contact@locasteel.com?subject=Demande de devis LOCASTEEL&body=${encodeURIComponent(mailBody)}`;
+            
+            // Vider le panier
+            cart = [];
+            saveCart();
+            updateCartUI();
+            closeCheckoutModal();
+            
+            alert('Votre demande de devis a été préparée. Votre client mail va s\'ouvrir pour envoyer la demande.');
+        }
+
+        // Menu mobile
+        function toggleMobileMenu() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        }
+
+        // ========== PAIEMENT STRIPE ==========
+        // Initialiser Stripe avec la clé publique
+        const stripe = Stripe('pk_live_51Ss2cfAb5jGZJucIUEXY62Y5gW3aHmE0MVzAkcEfb5bkbomyGuYxUNJCInhmWRjoFjeS3F4XTZZ2qr5EmkAexV4M00Vo7vs6WV');
+
+        function showPaymentForm() {
+            const modal = document.getElementById('payment-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+            
+            // Calculer les totaux
+            const subtotal = cart.reduce((sum, item) => sum + item.totalPrice, 0);
+            const transportInfo = calculateTransport(subtotal);
+            const totalHT = subtotal + transportInfo.amount;
+            const tva = totalHT * 0.20;
+            const totalTTC = totalHT + tva;
+            
+            // Afficher les montants
+            document.getElementById('payment-total-ht').textContent = totalHT.toLocaleString('fr-FR', {minimumFractionDigits: 2}) + ' €';
+            document.getElementById('payment-tva').textContent = tva.toLocaleString('fr-FR', {minimumFractionDigits: 2}) + ' €';
+            document.getElementById('payment-total-ttc').textContent = totalTTC.toLocaleString('fr-FR', {minimumFractionDigits: 2}) + ' €';
+            document.getElementById('btn-amount').textContent = totalTTC.toLocaleString('fr-FR', {minimumFractionDigits: 2}) + ' € TTC';
+        }
+
+        function closePaymentModal() {
+            const modal = document.getElementById('payment-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        async function processPayment(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submit-payment');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Traitement en cours...';
+            
+            const formData = new FormData(e.target);
+            const email = formData.get('pay-email');
+            const prenom = formData.get('pay-prenom');
+            const nom = formData.get('pay-nom');
+            
+            try {
+                // Appeler la fonction Netlify pour créer la session Stripe
+                const response = await fetch('/.netlify/functions/create-checkout-session', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        items: cart,
+                        customerEmail: email,
+                        customerName: `${prenom} ${nom}`,
+                        customerPhone: formData.get('pay-telephone'),
+                        customerAddress: formData.get('pay-adresse'),
+                    }),
+                });
+                
+                const data = await response.json();
+                
+                if (data.url) {
+                    // Sauvegarder les infos pour la confirmation
+                    localStorage.setItem('locasteel_pending_order', JSON.stringify({
+                        email: email,
+                        name: `${prenom} ${nom}`,
+                        items: cart
+                    }));
+                    
+                    // Rediriger vers Stripe Checkout
+                    window.location.href = data.url;
+                } else if (data.sessionId) {
+                    // Alternative : utiliser redirectToCheckout
+                    const result = await stripe.redirectToCheckout({ sessionId: data.sessionId });
+                    if (result.error) {
+                        throw new Error(result.error.message);
+                    }
+                } else {
+                    throw new Error('Erreur lors de la création de la session de paiement');
+                }
+            } catch (error) {
+                console.error('Erreur paiement:', error);
+                alert('Une erreur est survenue. Veuillez réessayer ou nous contacter au 06 85 56 39 01');
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-lock mr-2"></i>Payer <span id="btn-amount" class="ml-1">' + document.getElementById('payment-total-ttc').textContent + '</span>';
+            }
+        }
+
+        // Vérifier si on revient de Stripe (succès ou annulation)
+        function checkStripeReturn() {
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            if (urlParams.get('success') === 'true') {
+                // Paiement réussi
+                const pendingOrder = JSON.parse(localStorage.getItem('locasteel_pending_order') || '{}');
+                const sessionId = urlParams.get('session_id');
+                
+                // Vider le panier
+                cart = [];
+                saveCart();
+                updateCartUI();
+                localStorage.removeItem('locasteel_pending_order');
+                
+                // Afficher la confirmation
+                showConfirmation(
+                    pendingOrder.email || 'client@email.com',
+                    'CMD-' + (sessionId ? sessionId.slice(-8).toUpperCase() : Date.now().toString(36).toUpperCase()),
+                    0 // Le montant sera affiché depuis Stripe
+                );
+                
+                // Nettoyer l'URL
+                window.history.replaceState({}, document.title, window.location.pathname);
+            } else if (urlParams.get('canceled') === 'true') {
+                // Paiement annulé
+                alert('Le paiement a été annulé. Votre panier a été conservé.');
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
+        }
+
+        function showConfirmation(email, orderNumber, totalTTC) {
+            document.getElementById('confirmation-email').textContent = email;
+            document.getElementById('order-number').textContent = orderNumber;
+            document.getElementById('order-amount').textContent = totalTTC > 0 ? totalTTC.toLocaleString('fr-FR', {minimumFractionDigits: 2}) + ' € TTC' : 'Voir email de confirmation';
+            
+            const modal = document.getElementById('confirmation-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeConfirmationModal() {
+            const modal = document.getElementById('confirmation-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        // Vérifier le retour Stripe au chargement
+        document.addEventListener('DOMContentLoaded', checkStripeReturn);
+
+        // ========== PRISE DE RDV ==========
+        function openRdvModal() {
+            const modal = document.getElementById('rdv-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+            
+            // Définir la date minimum à demain
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            const minDate = tomorrow.toISOString().split('T')[0];
+            document.getElementById('rdv-date').setAttribute('min', minDate);
+        }
+
+        function closeRdvModal() {
+            const modal = document.getElementById('rdv-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+
+        function submitRdv(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(e.target);
+            const nom = formData.get('rdv-nom');
+            const prenom = formData.get('rdv-prenom');
+            const email = formData.get('rdv-email');
+            const telephone = formData.get('rdv-telephone');
+            const societe = formData.get('rdv-societe') || 'Non renseigné';
+            const date = formData.get('rdv-date');
+            const heure = formData.get('rdv-heure');
+            const engin = formData.get('rdv-engin') || 'Non renseigné';
+            const projet = formData.get('rdv-projet') || 'Non renseigné';
+            
+            // Formater la date
+            const dateObj = new Date(date);
+            const dateFormatted = dateObj.toLocaleDateString('fr-FR', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+            
+            const mailBody = `
+DEMANDE DE RENDEZ-VOUS - ÉTUDE DE PROJET GODET FLECO
+
+📅 Date souhaitée : ${dateFormatted}
+⏰ Créneau horaire : ${heure}
+
+👤 INFORMATIONS CLIENT
+- Nom : ${nom}
+- Prénom : ${prenom}
+- Email : ${email}
+- Téléphone : ${telephone}
+- Société : ${societe}
+
+🚜 PROJET
+- Type d'engin : ${engin}
+- Description du projet : ${projet}
+
+---
+Demande envoyée depuis le site LOCASTEEL
+            `.trim();
+            
+            window.location.href = `mailto:contact@locasteel.com?subject=Demande de RDV - Étude projet Godet Fleco - ${prenom} ${nom}&body=${encodeURIComponent(mailBody)}`;
+            
+            closeRdvModal();
+            e.target.reset();
+            
+            alert('Votre demande de rendez-vous a été préparée. Votre client mail va s\'ouvrir pour envoyer la demande.');
+        }
+
+        // ========== CHATBOT IA ==========
+        let chatbotOpen = false;
+        let chatHistory = [];
+
+        function toggleChatbot() {
+            const window = document.getElementById('chatbot-window');
+            chatbotOpen = !chatbotOpen;
+            
+            if (chatbotOpen) {
+                window.classList.remove('hidden');
+                if (chatHistory.length === 0) {
+                    addBotMessage("Bonjour ! 👋 Je suis l'assistant LOCASTEEL. Comment puis-je vous aider aujourd'hui ?");
+                    addBotMessage("Vous pouvez me demander des conseils sur nos produits, les compatibilités avec votre engin, ou comment passer commande.");
+                }
+            } else {
+                window.classList.add('hidden');
+            }
+        }
+
+        function addBotMessage(text) {
+            const container = document.getElementById('chatbot-messages');
+            const msg = document.createElement('div');
+            msg.className = 'flex items-start gap-2';
+            msg.innerHTML = `
+                <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-robot text-white text-sm"></i>
+                </div>
+                <div class="bg-white p-3 rounded-lg rounded-tl-none shadow-sm max-w-[80%]">
+                    <p class="text-sm text-steel-700">${text}</p>
+                </div>
+            `;
+            container.appendChild(msg);
+            container.scrollTop = container.scrollHeight;
+            chatHistory.push({ role: 'bot', text });
+        }
+
+        function addUserMessage(text) {
+            const container = document.getElementById('chatbot-messages');
+            const msg = document.createElement('div');
+            msg.className = 'flex items-start gap-2 justify-end';
+            msg.innerHTML = `
+                <div class="bg-red-500 p-3 rounded-lg rounded-tr-none shadow-sm max-w-[80%]">
+                    <p class="text-sm text-white">${text}</p>
+                </div>
+            `;
+            container.appendChild(msg);
+            container.scrollTop = container.scrollHeight;
+            chatHistory.push({ role: 'user', text });
+        }
+
+        function addProductCard(product) {
+            const container = document.getElementById('chatbot-messages');
+            const msg = document.createElement('div');
+            msg.className = 'flex items-start gap-2';
+            msg.innerHTML = `
+                <div class="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-robot text-white text-sm"></i>
+                </div>
+                <div class="bg-white p-3 rounded-lg rounded-tl-none shadow-sm">
+                    <div class="flex gap-2 items-center">
+                        <img src="${product.image}" alt="${product.name}" class="w-12 h-12 object-cover rounded">
+                        <div>
+                            <p class="text-sm font-bold text-steel-800">${product.name}</p>
+                            <p class="text-xs text-steel-500">${product.description}</p>
+                            <p class="text-sm font-bold text-red-500">${product.price.toLocaleString('fr-FR')} € HT</p>
+                        </div>
+                    </div>
+                    <button onclick="scrollToProduct(${product.id})" class="mt-2 w-full text-xs bg-red-500 text-white py-1 px-2 rounded hover:bg-red-600">
+                        <i class="fas fa-eye mr-1"></i>Voir ce produit
+                    </button>
+                </div>
+            `;
+            container.appendChild(msg);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function scrollToProduct(productId) {
+            toggleChatbot();
+            const productCards = document.querySelectorAll('.product-card');
+            productCards.forEach(card => {
+                const addBtn = card.querySelector(`button[onclick*="addToCart(${productId})"]`);
+                if (addBtn) {
+                    card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    card.classList.add('ring-4', 'ring-red-500');
+                    setTimeout(() => card.classList.remove('ring-4', 'ring-red-500'), 3000);
+                }
+            });
+        }
+
+        function quickQuestion(question) {
+            document.getElementById('chatbot-input').value = question;
+            sendMessage();
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chatbot-input');
+            const text = input.value.trim();
+            if (!text) return;
+            
+            addUserMessage(text);
+            input.value = '';
+            
+            // Simuler un délai de réponse
+            setTimeout(() => {
+                const response = generateResponse(text);
+                addBotMessage(response.text);
+                if (response.products && response.products.length > 0) {
+                    response.products.forEach(p => addProductCard(p));
+                }
+            }, 500);
+        }
+
+        function generateResponse(userText) {
+            const text = userText.toLowerCase();
+            let response = { text: '', products: [] };
+
+            // Détection de marque d'engin
+            const marques = Object.keys(enginsDatabase);
+            let foundMarque = null;
+            let foundModele = null;
+            let foundTaille = null;
+
+            for (const marque of marques) {
+                if (text.includes(marque.toLowerCase())) {
+                    foundMarque = marque;
+                    for (const engin of enginsDatabase[marque]) {
+                        if (text.includes(engin.modele.toLowerCase())) {
+                            foundModele = engin.modele;
+                            foundTaille = engin.taille;
+                            break;
+                        }
+                    }
+                    break;
+                }
+            }
+
+            // Détection de catégorie de produit
+            const categories = {
+                'pince': ['pince', 'bois', 'grappin', 'multifonction'],
+                'brh': ['brh', 'brise roche', 'marteau', 'hydraulique'],
+                'peigne': ['peigne', 'godet peigne'],
+                'rateau': ['rateau', 'râteau', 'curage'],
+                'inclinable': ['inclinable', 'curage inclinable'],
+                'dent': ['dent', 'ripper', 'déroctage'],
+                'pince': ['pince de tri', 'tri']
+            };
+
+            let foundCategory = null;
+            for (const [cat, keywords] of Object.entries(categories)) {
+                if (keywords.some(kw => text.includes(kw))) {
+                    foundCategory = cat;
+                    break;
+                }
+            }
+
+            // Détection de tonnage
+            const tonnageMatch = text.match(/(\d+(?:,\d+)?)\s*(?:t|tonnes?)/i);
+            if (tonnageMatch && !foundTaille) {
+                const tonnage = parseFloat(tonnageMatch[1].replace(',', '.'));
+                if (tonnage <= 1) foundTaille = 'T01';
+                else if (tonnage <= 2.5) foundTaille = 'T12';
+                else if (tonnage <= 4) foundTaille = 'T23';
+                else if (tonnage <= 6) foundTaille = 'T35';
+                else if (tonnage <= 12) foundTaille = 'T810';
+                else foundTaille = 'T1215';
+            }
+
+            // Génération de la réponse
+            if (foundMarque && foundModele) {
+                response.text = `Parfait ! Pour votre ${foundMarque} ${foundModele}, voici les accessoires compatibles :`;
+                response.products = products.filter(p => p.taille === foundTaille).slice(0, 3);
+            } else if (foundMarque) {
+                response.text = `Je vois que vous avez un engin ${foundMarque}. Pouvez-vous me préciser le modèle exact ? Par exemple : ${enginsDatabase[foundMarque].slice(0, 3).map(e => e.modele).join(', ')}...`;
+            } else if (foundTaille) {
+                response.text = `Pour un engin de cette catégorie, voici quelques produits compatibles :`;
+                response.products = products.filter(p => p.taille === foundTaille).slice(0, 3);
+            } else if (foundCategory) {
+                response.text = `Voici nos produits dans la catégorie demandée :`;
+                response.products = products.filter(p => p.category === foundCategory).slice(0, 3);
+            } else if (text.includes('prix') || text.includes('tarif') || text.includes('coût') || text.includes('combien')) {
+                response.text = "Nos prix sont affichés HT (hors taxes). Les frais de transport sont calculés automatiquement : 10% jusqu'à 1000€, 8% de 1000€ à 2000€, 6% de 2000€ à 4000€, et 5% au-delà. Quel produit vous intéresse ?";
+            } else if (text.includes('commander') || text.includes('commande') || text.includes('acheter') || text.includes('devis')) {
+                response.text = "Pour commander, c'est simple ! 1️⃣ Ajoutez les produits au panier 2️⃣ Cliquez sur le panier en haut 3️⃣ Remplissez le formulaire de demande de devis. Nous vous recontacterons rapidement !";
+            } else if (text.includes('livraison') || text.includes('délai') || text.includes('transport')) {
+                response.text = "Nous livrons dans toute la France ! Les frais de transport sont inclus dans le devis (entre 5% et 10% selon le montant). Les délais varient selon les produits, généralement entre 1 et 3 semaines.";
+            } else if (text.includes('contact') || text.includes('téléphone') || text.includes('appeler')) {
+                response.text = "Vous pouvez nous contacter au 📞 06 85 56 39 01 ou par email à 📧 contact@locasteel.com. Nous sommes basés au Haillan (33185).";
+            } else if (text.includes('bonjour') || text.includes('salut') || text.includes('hello')) {
+                response.text = "Bonjour ! 😊 Comment puis-je vous aider ? Dites-moi quel type de produit vous recherchez ou la marque/modèle de votre engin.";
+            } else if (text.includes('merci')) {
+                response.text = "Avec plaisir ! N'hésitez pas si vous avez d'autres questions. Bonne visite sur LOCASTEEL ! 🔧";
+            } else {
+                response.text = "Je peux vous aider à trouver le bon accessoire ! Dites-moi :\n• La marque et le modèle de votre engin (ex: Kubota U35)\n• Ou le type de produit recherché (ex: godet peigne, pince de tri)\n• Ou le tonnage de votre machine (ex: 5 tonnes)";
+            }
+
+            return response;
+        }
+    </script>
+</body>
+</html>

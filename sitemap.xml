@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    
+    <!-- Page d'accueil - Priorité maximale -->
+    <url>
+        <loc>https://www.locasteel.com/</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://www.locasteel.com/images/LOCASTEEL%20LOGO%20OFFICIEL.jpeg</image:loc>
+            <image:title>LOCASTEEL - Location accessoires engins TP Bordeaux</image:title>
+            <image:caption>Spécialiste location et vente accessoires pour pelles et engins de travaux publics</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Boutique en ligne - Priorité haute -->
+    <url>
+        <loc>https://www.locasteel.com/boutique.html</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Pages Accessoires - Priorité haute -->
+    <url>
+        <loc>https://www.locasteel.com/godet-fleco.html</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://www.locasteel.com/images/GODET%20FLECO.jpeg</image:loc>
+            <image:title>Location godet fléco pour pelle - LOCASTEEL Bordeaux</image:title>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://www.locasteel.com/brh-marteaux.html</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://www.locasteel.com/images/BRISE%20ROCHE%20.jpeg</image:loc>
+            <image:title>Location BRH marteau hydraulique brise roche - LOCASTEEL</image:title>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://www.locasteel.com/broyeur-beton.html</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://www.locasteel.com/images/BROYEUR%20BETON%20.jpeg</image:loc>
+            <image:title>Location broyeur béton démolition - LOCASTEEL Bordeaux</image:title>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://www.locasteel.com/grappin.html</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://www.locasteel.com/images/GRAPPIN%20.jpeg</image:loc>
+            <image:title>Location grappin forestier multifonction - LOCASTEEL</image:title>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://www.locasteel.com/pince-tri.html</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://www.locasteel.com/images/pince%20de%20tri.jpeg</image:loc>
+            <image:title>Location pince de tri sélectif démolition - LOCASTEEL</image:title>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://www.locasteel.com/godet-rateau.html</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://www.locasteel.com/images/GODET%20RATEAU%20.jpeg</image:loc>
+            <image:title>Location godet râteau squelette - LOCASTEEL Bordeaux</image:title>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://www.locasteel.com/godet-grappin.html</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://www.locasteel.com/images/GODET%20GRAPPIN%20.jpeg</image:loc>
+            <image:title>Location godet grappin pelle mécanique - LOCASTEEL</image:title>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://www.locasteel.com/cisaille-ferraille.html</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://www.locasteel.com/images/Cisaille%20Feraille%20.jpeg</image:loc>
+            <image:title>Location cisaille ferraille recyclage métaux - LOCASTEEL</image:title>
+        </image:image>
+    </url>
+    
+    <url>
+        <loc>https://www.locasteel.com/lame-nivellement.html</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://www.locasteel.com/images/LAME%20DE%20NIVELLEMENT%20.jpeg</image:loc>
+            <image:title>Location lame de nivellement terrassement - LOCASTEEL</image:title>
+        </image:image>
+    </url>
+    
+    <!-- Page Occasions - Priorité haute (contenu dynamique) -->
+    <url>
+        <loc>https://www.locasteel.com/occasions.html</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Espace Client - Priorité basse (accès restreint) -->
+    <url>
+        <loc>https://www.locasteel.com/espace-client.html</loc>
+        <lastmod>2026-01-20</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+</urlset>

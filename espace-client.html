@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Client Professionnel | Catalogues et Tarifs - LOCASTEEL Bordeaux</title>
+    <meta name="description" content="Espace client LOCASTEEL - Accès réservé aux professionnels. Catalogues complets, tarifs location et vente accessoires TP.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="author" content="LOCASTEEL">
+    <link rel="canonical" href="https://www.locasteel.com/espace-client.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="LOCASTEEL">
+    <meta property="og:title" content="Espace Client - LOCASTEEL">
+    <meta property="og:description" content="Accès réservé aux clients professionnels LOCASTEEL.">
+    <meta property="og:locale" content="fr_FR">
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script>tailwind.config={theme:{extend:{colors:{red:{50:'#fef2f2',100:'#fee2e2',200:'#fecaca',300:'#fca5a5',400:'#f87171',500:'#DC143C',600:'#C41E3A',700:'#A91B2E',800:'#991b1b',900:'#7f1d1d'},steel:{50:'#f8f8f8',100:'#f0f0f0',200:'#e4e4e4',300:'#d1d1d1',400:'#a3a3a3',500:'#737373',600:'#525252',700:'#404040',800:'#262626',900:'#171717'}}}}}</script>
+    <style>
+        .red-gradient{background:linear-gradient(135deg,#DC143C 0%,#A91B2E 100%)}
+        .login-container { display: block; }
+        .client-area { display: none; }
+        .logged-in .login-container { display: none; }
+        .logged-in .client-area { display: block; }
+    </style>
+</head>
+<body class="bg-steel-100 min-h-screen">
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center">
+                    <img src="images/LOCASTEEL LOGO OFFICIEL.jpeg" alt="LOCASTEEL Logo" class="h-16 w-auto">
+                </a>
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-steel-700 hover:text-red-500 font-medium">Accueil</a>
+                    <a href="index.html#catalogue" class="text-steel-700 hover:text-red-500 font-medium">Catalogue</a>
+                    <a href="index.html#contact" class="text-steel-700 hover:text-red-500 font-medium">Contact</a>
+                    <button id="logoutBtn" class="hidden bg-steel-200 text-steel-700 px-4 py-2 rounded-lg font-medium hover:bg-steel-300">
+                        <i class="fas fa-sign-out-alt mr-2"></i>Déconnexion
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mainContent">
+        <!-- Section Connexion -->
+        <section class="login-container py-20">
+            <div class="max-w-md mx-auto px-4">
+                <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                    <div class="red-gradient p-8 text-center">
+                        <div class="bg-white/20 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-user-lock text-4xl text-white"></i>
+                        </div>
+                        <h1 class="text-2xl font-bold text-white">Espace Client Privilégié</h1>
+                        <p class="text-white/80 mt-2">Accès réservé aux clients LOCASTEEL</p>
+                    </div>
+                    <div class="p-8">
+                        <p class="text-steel-600 text-center mb-6">Connectez-vous pour accéder à vos catalogues et tarifs exclusifs.</p>
+                        <button id="loginBtn" class="w-full red-gradient text-white py-4 rounded-xl font-semibold text-lg hover:opacity-90 transition flex items-center justify-center">
+                            <i class="fas fa-sign-in-alt mr-3"></i>Se connecter
+                        </button>
+                        <div class="mt-6 text-center">
+                            <p class="text-steel-500 text-sm">Vous n'avez pas de compte ?</p>
+                            <a href="tel:+33685563901" class="text-red-500 font-semibold hover:underline">Contactez-nous au 06 85 56 39 01</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <a href="index.html" class="text-steel-500 hover:text-red-500"><i class="fas fa-arrow-left mr-2"></i>Retour à l'accueil</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Espace Client (visible après connexion) -->
+        <section class="client-area py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-white rounded-2xl shadow-xl p-8 mb-8">
+                    <div class="flex items-center justify-between flex-wrap gap-4">
+                        <div>
+                            <h1 class="text-3xl font-bold text-steel-800">Bienvenue dans votre espace client</h1>
+                            <p class="text-steel-600 mt-2">Accédez à vos documents exclusifs LOCASTEEL</p>
+                        </div>
+                        <div class="flex items-center bg-green-100 text-green-700 px-4 py-2 rounded-full">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            <span id="userEmail" class="font-medium">Client connecté</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Catalogue Complet -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition">
+                        <div class="bg-red-500 p-6 text-white">
+                            <div class="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-book text-3xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Catalogue Complet</h3>
+                            <p class="text-white/80 text-sm mt-1">Tous nos accessoires TP</p>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-steel-600 mb-4">Découvrez l'ensemble de notre gamme d'accessoires pour engins de travaux publics.</p>
+                            <a href="images/LOCASTEEL CATALOGUE .pdf" download class="block w-full bg-steel-800 text-white text-center py-3 rounded-lg font-semibold hover:bg-steel-900 transition">
+                                <i class="fas fa-download mr-2"></i>Télécharger PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tarifs Location -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition">
+                        <div class="bg-blue-600 p-6 text-white">
+                            <div class="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-calendar-alt text-3xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Tarifs Location</h3>
+                            <p class="text-white/80 text-sm mt-1">Grille tarifaire exclusive</p>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-steel-600 mb-4">Consultez nos tarifs préférentiels de location réservés à nos clients privilégiés.</p>
+                            <a href="images/TARIFS-LOCATION.pdf" download class="block w-full bg-steel-800 text-white text-center py-3 rounded-lg font-semibold hover:bg-steel-900 transition">
+                                <i class="fas fa-download mr-2"></i>Télécharger PDF
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tarifs Vente -->
+                    <div class="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition">
+                        <div class="bg-green-600 p-6 text-white">
+                            <div class="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-tags text-3xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold">Tarifs Vente</h3>
+                            <p class="text-white/80 text-sm mt-1">Prix d'achat exclusifs</p>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-steel-600 mb-4">Accédez à nos prix de vente réservés aux professionnels partenaires.</p>
+                            <a href="images/TARIFS-VENTE.pdf" download class="block w-full bg-steel-800 text-white text-center py-3 rounded-lg font-semibold hover:bg-steel-900 transition">
+                                <i class="fas fa-download mr-2"></i>Télécharger PDF
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section Contact Direct -->
+                <div class="mt-12 bg-steel-900 rounded-2xl p-8 text-white">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                        <div>
+                            <h3 class="text-2xl font-bold mb-2">Besoin d'un devis personnalisé ?</h3>
+                            <p class="text-steel-400">Notre équipe est à votre disposition pour toute demande spécifique.</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <a href="tel:+33685563901" class="red-gradient text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">
+                                <i class="fas fa-phone mr-2"></i>06 85 56 39 01
+                            </a>
+                            <a href="mailto:contact@locasteel.com" class="bg-white text-steel-800 px-6 py-3 rounded-lg font-semibold hover:bg-steel-100 transition">
+                                <i class="fas fa-envelope mr-2"></i>Email
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="bg-steel-900 text-white py-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-steel-500 text-sm">© 2024 LOCASTEEL. Tous droits réservés. | <a href="index.html" class="hover:text-white">Retour à l'accueil</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Netlify Identity Widget
+        const loginBtn = document.getElementById('loginBtn');
+        const logoutBtn = document.getElementById('logoutBtn');
+        const mainContent = document.getElementById('mainContent');
+        const userEmailSpan = document.getElementById('userEmail');
+
+        // Ouvrir le widget de connexion
+        loginBtn.addEventListener('click', () => {
+            netlifyIdentity.open('login');
+        });
+
+        // Déconnexion
+        logoutBtn.addEventListener('click', () => {
+            netlifyIdentity.logout();
+        });
+
+        // Vérifier si l'utilisateur est connecté
+        netlifyIdentity.on('init', user => {
+            if (user) {
+                showClientArea(user);
+            }
+        });
+
+        // Après connexion réussie
+        netlifyIdentity.on('login', user => {
+            showClientArea(user);
+            netlifyIdentity.close();
+        });
+
+        // Après déconnexion
+        netlifyIdentity.on('logout', () => {
+            mainContent.classList.remove('logged-in');
+            logoutBtn.classList.add('hidden');
+        });
+
+        function showClientArea(user) {
+            mainContent.classList.add('logged-in');
+            logoutBtn.classList.remove('hidden');
+            if (user && user.email) {
+                userEmailSpan.textContent = user.email;
+            }
+        }
+
+        // Initialiser Netlify Identity
+        netlifyIdentity.init({
+            locale: 'fr'
+        });
+    </script>
+</body>
+</html>

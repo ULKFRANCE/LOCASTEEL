@@ -1,0 +1,49 @@
+# robots.txt pour LOCASTEEL - Accessoires TP Bordeaux
+# https://www.locasteel.com
+
+User-agent: *
+Allow: /
+
+# Fichiers importants
+Allow: /index.html
+Allow: /godet-fleco.html
+Allow: /brh-marteaux.html
+Allow: /broyeur-beton.html
+Allow: /grappin.html
+Allow: /pince-tri.html
+Allow: /godet-rateau.html
+Allow: /godet-grappin.html
+Allow: /cisaille-ferraille.html
+Allow: /lame-nivellement.html
+Allow: /occasions.html
+Allow: /espace-client.html
+
+# Images autorisées pour indexation
+Allow: /images/*.jpeg
+Allow: /images/*.jpg
+Allow: /images/*.png
+Allow: /images/*.webp
+
+# Ressources à ne pas indexer
+Disallow: /images/*.pdf
+Disallow: /*.pdf$
+
+# Sitemap
+Sitemap: https://www.locasteel.com/sitemap.xml
+
+# Crawl-delay pour ne pas surcharger le serveur
+Crawl-delay: 1
+
+# Googlebot spécifique
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Googlebot Images
+User-agent: Googlebot-Image
+Allow: /images/
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

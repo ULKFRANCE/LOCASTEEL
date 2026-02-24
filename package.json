@@ -1,0 +1,11 @@
+{
+  "name": "locasteel-site",
+  "version": "1.0.0",
+  "description": "Site LOCASTEEL avec paiement Stripe",
+  "scripts": {
+    "build": "echo 'No build required'"
+  },
+  "dependencies": {
+    "stripe": "^14.0.0"
+  }
+}
