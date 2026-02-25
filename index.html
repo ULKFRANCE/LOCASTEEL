@@ -713,7 +713,7 @@
     <script>
         document.getElementById('mobile-menu-btn').addEventListener('click',function(){document.getElementById('mobile-menu').classList.toggle('hidden')});
         document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t){t.scrollIntoView({behavior:'smooth'});document.getElementById('mobile-menu').classList.add('hidden')}})});
-        document.getElementById('contact-form').addEventListener('submit',function(e){e.preventDefault();const formData=new FormData(this);fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(formData).toString()}).then(()=>{alert('Merci pour votre demande ! Notre équipe vous contactera rapidement.');this.reset()}).catch(err=>{alert('Erreur lors de l\'envoi. Veuillez réessayer ou nous appeler.');console.error(err)})});
+        document.getElementById('contact-form').addEventListener('submit',function(e){e.preventDefault();const formData=new FormData(this);const data={nom:formData.get('nom'),prenom:formData.get('prenom'),email:formData.get('email'),telephone:formData.get('telephone'),besoin:formData.get('besoin'),message:formData.get('message')};fetch('/.netlify/functions/send-contact',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}).then(res=>res.json()).then(result=>{if(result.success){alert('Merci pour votre demande ! Notre équipe vous contactera rapidement.');this.reset()}else{throw new Error(result.error)}}).catch(err=>{alert('Erreur lors de l\'envoi. Veuillez réessayer ou nous appeler au 06 85 56 39 01');console.error(err)})});
     </script>
 </body>
 </html>
